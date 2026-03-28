@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { Outlet, useLocation, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-import { ScrollController } from '../3d/ScrollController';
 
 const navItems = [
   { label: 'Home', href: '/' },
@@ -16,14 +15,10 @@ export function Layout() {
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
 
-  // Only show 3D character on home page
-  const show3DCharacter = location.pathname === '/';
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -33,11 +28,14 @@ export function Layout() {
     setIsMenuOpen(false);
   }, [location]);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = isMenuOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [isMenuOpen]);
+
   return (
     <div className="min-h-screen bg-warm-white">
-      {/* 3D Character - only on home page */}
-      {show3DCharacter && <ScrollController />}
-
       {/* Navigation */}
       <motion.header
         initial={{ y: -100 }}
@@ -106,7 +104,6 @@ export function Layout() {
               className="absolute inset-0 bg-charcoal/20 backdrop-blur-sm"
               onClick={() => setIsMenuOpen(false)}
             />
-
             <motion.div
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
