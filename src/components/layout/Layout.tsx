@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Outlet, useLocation, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import { ScrollRestoration } from 'react-router-dom';
 
 const navItems = [
   { label: 'Home', href: '/' },
@@ -154,5 +155,6 @@ export function Layout() {
         </AnimatePresence>
       </main>
     </div>
+    <ScrollRestoration />
   );
 }
