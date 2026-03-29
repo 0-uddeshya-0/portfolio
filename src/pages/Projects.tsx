@@ -35,8 +35,8 @@ function ArchitectureDiagram({ techStack }: { techStack: string[] }) {
     ai: { label: 'AI / ML', color: 'bg-muted-sage/20 text-charcoal' },
     backend: { label: 'Backend', color: 'bg-muted-blue/20 text-charcoal' },
     frontend: { label: 'Frontend', color: 'bg-light-beige text-charcoal' },
-    methodology: { label: 'Methodology', color: 'bg-charcoal/8 text-charcoal' },
-    infra: { label: 'Infra', color: 'bg-charcoal/8 text-charcoal' },
+    methodology: { label: 'Methodology', color: 'bg-charcoal/10 text-charcoal' },
+    infra: { label: 'Infra', color: 'bg-charcoal/10 text-charcoal' },
   };
 
   const visible = Object.entries(layers).filter(([, items]) => items.length > 0);
