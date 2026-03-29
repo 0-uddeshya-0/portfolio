@@ -398,7 +398,7 @@ export function Home() {
                 >
                   <div className="flex items-start gap-6">
                     <div
-                      className="w-16 h-22 rounded-xl flex-shrink-0 flex items-center justify-center"
+                      className="w-16 h-24 rounded-xl flex-shrink-0 flex items-center justify-center"
                       style={{ backgroundColor: pub.coverColor + '28', minHeight: '88px' }}
                     >
                       <BookOpen className="w-7 h-7 text-muted-sage" />
