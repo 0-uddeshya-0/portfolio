@@ -269,21 +269,55 @@ export const publications = [
     // Keep each poem to 4–8 lines for the preview.
     poems: [
       {
-        title: "[ Add poem title ]",
+        title: "[ Have we met before? ]",
         lines: [
-          "Replace this with the first line of your poem,",
-          "let the second carry the weight of the first,",
-          "a pause — then the third arrives,",
-          "and the last line closes quietly.",
+          "You look familiar 
+          Did I see you before?
+
+          Heart’s convinced 
+          But eyes aren’t so sure
+          
+          Have I ever siped
+          From your lips before?
+          
+          Cuz they tremble 
+          When you knock on my mind’s door
+          
+          Only you can tell me
+          What might be its cure
+          
+          My soul’s confused 
+          Don’t know how to endure 
+          
+          Since ages I’ve known you
+          But who’s there to assure
+          
+          What we held once
+          Memories, Future or something more",
         ],
       },
       {
-        title: "[ Add poem title ]",
+        title: "[ Misunderstood understood ]",
         lines: [
-          "These are placeholder lines only.",
-          "Add actual verses from Brain's Heart here.",
-          "Short excerpts work well for a preview —",
-          "four to eight lines, nothing more.",
+          "In the shadows of choices, we're entwined,
+          A life dictated, a fate unkind.
+          Blaming the winds that blow us astray,
+          Yet we're the architects of our own dismay.
+          
+          Sorry creatures, seeking pity's embrace,
+          Crafting tales of woe, our hearts misplace.
+          Miseries named, in this twisted charade,
+          A dance of despair, a relentless crusade.
+            
+          We, the victims or architects of strife?
+          Choosing paths that carve the script of life.
+          In echoes of choices, bitter and cold,
+          A symphony of sorrow, a tale untold.
+      
+          Pity not the beings lost in their blame,
+          For we are the authors of our own cruel game.
+          Seeking solace in the sympathy we find,
+          In a world where our choices are intertwined.",
         ],
       },
     ],
