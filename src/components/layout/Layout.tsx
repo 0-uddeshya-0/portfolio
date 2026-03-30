@@ -36,6 +36,7 @@ export function Layout() {
   }, [isMenuOpen]);
 
   return (
+  <>
     <div className="min-h-screen bg-warm-white">
       {/* Navigation */}
       <motion.header
@@ -156,5 +157,6 @@ export function Layout() {
       </main>
     </div>
     <ScrollRestoration />
+  </>
   );
 }
