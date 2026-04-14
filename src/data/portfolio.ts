@@ -1,3 +1,8 @@
+export const getAssetPath = (path: string) => {
+  const cleaned = path.startsWith('/') ? path.slice(1) : path;
+  return `${import.meta.env.BASE_URL}${cleaned}`;
+};
+
 export const personalInfo = {
   name: "Uddeshya Singh",
   title: "Data & AI Systems Builder",
@@ -9,7 +14,7 @@ export const personalInfo = {
   github: "https://github.com/0-uddeshya-0",
   // Place your profile photo at: public/profile.jpg
   // Use the grey-blazer headshot — lighter background suits the warm-white design
-  photo: "/profile.jpg",
+  photo: getAssetPath("profile.jpg"),
 };
 
 export type PortfolioProject = {
@@ -448,7 +453,7 @@ export const publications = [
     type: "Poetry Collection",
     publisher: "Writersgram Publications",
     year: "2023",
-    coverImage: "/book-cover.png",
+    coverImage: getAssetPath("book-cover.png"),
     description:
       "A debut poetry collection exploring consciousness, emotion, and the tender contradictions of being human. Written in moments between deadlines and design sprints.",
     longDescription:

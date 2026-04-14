@@ -12,7 +12,7 @@ import {
   User,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { localizePublication, personalInfo, publications } from '../data/portfolio';
+import { getAssetPath, localizePublication, personalInfo, publications } from '../data/portfolio';
 import { useI18n } from '../i18n/context';
 
 const VALUE_KEYS = ['ai', 'data', 'impact'] as const;
@@ -458,7 +458,7 @@ export function Home() {
                   <div className="flex items-start gap-6">
                     <div className="w-[4.5rem] h-[6.75rem] rounded-xl flex-shrink-0 overflow-hidden border border-light-beige shadow-xs bg-charcoal/5">
                       <img
-                        src={localizedPub.coverImage ?? '/book-cover.png'}
+                        src={localizedPub.coverImage ?? getAssetPath('book-cover.png')}
                         alt=""
                         className="w-full h-full object-cover"
                         width={72}

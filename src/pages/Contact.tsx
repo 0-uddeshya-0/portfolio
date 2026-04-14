@@ -8,7 +8,7 @@ import {
   MapPin,
   MessageSquare,
 } from 'lucide-react';
-import { personalInfo } from '../data/portfolio';
+import { getAssetPath, personalInfo } from '../data/portfolio';
 import { useI18n } from '../i18n/context';
 
 export function Contact() {
@@ -88,7 +88,7 @@ export function Contact() {
 
             <div className="grid sm:grid-cols-2 gap-3">
               <a
-                href="/Resume.pdf"
+                href={getAssetPath('Resume.pdf')}
                 download
                 className="group flex items-center gap-4 p-5 bg-charcoal rounded-2xl hover:bg-charcoal/90 transition-all duration-500"
               >
@@ -103,7 +103,7 @@ export function Contact() {
               </a>
 
               <a
-                href="/Resume-DE.pdf"
+                href={getAssetPath('Resume-DE.pdf')}
                 download
                 className="group flex items-center gap-4 p-5 bg-light-beige rounded-2xl hover:bg-muted-sage/20 transition-all duration-500 border border-light-beige"
               >

@@ -20,6 +20,7 @@ import {
   experience,
   education,
   certifications,
+  getAssetPath,
   localizeProject,
   localizePublication,
   projects,
@@ -41,23 +42,23 @@ const SKILL_CAT_KEY: Record<string, 'aiMl' | 'dataEng' | 'designProduct' | 'tool
 };
 
 const certificationLinks: Record<string, string> = {
-  'Applied Design Thinking Project: Identification of AI Use Cases': '/certificates/uzin-utz-certificate.pdf',
-  SQL: '/certificates/sql-certificate.pdf',
-  'Project Management': '/certificates/project-management-certificate.pdf',
-  'The Fundamentals of Digital Marketing': '/certificates/digital-marketing-certificate.pdf',
-  'Entrepreneurship Foundation': '/certificates/entrepreneurship-certificate.pdf',
+  'Applied Design Thinking Project: Identification of AI Use Cases': getAssetPath('certificates/uzin-utz-certificate.pdf'),
+  SQL: getAssetPath('certificates/sql-certificate.pdf'),
+  'Project Management': getAssetPath('certificates/project-management-certificate.pdf'),
+  'The Fundamentals of Digital Marketing': getAssetPath('certificates/digital-marketing-certificate.pdf'),
+  'Entrepreneurship Foundation': getAssetPath('certificates/entrepreneurship-certificate.pdf'),
 };
 
 const sketchGallery = [
-  { id: 'maasi', src: '/sketches/maasi.png', subject: 'Portrait Study' },
-  { id: 'shreyashi', src: '/sketches/shreyashi.png', subject: 'Portrait Study' },
-  { id: 'mountains', src: '/sketches/mountains.png', subject: 'Ink Mountains' },
-  { id: 'pastel-sky', src: '/sketches/pastel-sky.png', subject: 'Acrylic Sky' },
-  { id: 'masi', src: '/sketches/masi.png', subject: 'Portrait Study' },
-  { id: 'dadu', src: '/sketches/dadu.png', subject: 'Portrait Study' },
-  { id: 'rishabh', src: '/sketches/rishabh.png', subject: 'Portrait Study' },
-  { id: 'isha', src: '/sketches/isha.png', subject: 'Portrait Study' },
-  { id: 'munni', src: '/sketches/munni.png', subject: 'Portrait Study' },
+  { id: 'maasi', src: getAssetPath('sketches/maasi.png'), subject: 'Portrait Study' },
+  { id: 'shreyashi', src: getAssetPath('sketches/shreyashi.png'), subject: 'Portrait Study' },
+  { id: 'mountains', src: getAssetPath('sketches/mountains.png'), subject: 'Ink Mountains' },
+  { id: 'pastel-sky', src: getAssetPath('sketches/pastel-sky.png'), subject: 'Acrylic Sky' },
+  { id: 'masi', src: getAssetPath('sketches/masi.png'), subject: 'Portrait Study' },
+  { id: 'dadu', src: getAssetPath('sketches/dadu.png'), subject: 'Portrait Study' },
+  { id: 'rishabh', src: getAssetPath('sketches/rishabh.png'), subject: 'Portrait Study' },
+  { id: 'isha', src: getAssetPath('sketches/isha.png'), subject: 'Portrait Study' },
+  { id: 'munni', src: getAssetPath('sketches/munni.png'), subject: 'Portrait Study' },
   ...creativeWork.series.flatMap((series) =>
     series.pieces.map((piece) => ({
       id: `${series.id}-${piece.id}`,
