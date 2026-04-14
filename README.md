@@ -1,128 +1,65 @@
-# Uddeshya Singh — portfolio
+# Uddeshya Singh — Portfolio
 
-Personal portfolio site: **React**, **TypeScript**, **Vite**, **Tailwind CSS**, **Framer Motion**.  
-Calm, editorial layout with projects, publications, and contact.
+Personal website and working portfolio for AI systems, data engineering, and product-minded software work.
 
-<p align="center">
-  <a href="https://YOUR-DEPLOYED-SITE.example"><strong>Live site →</strong></a>
-  &nbsp;·&nbsp;
-  <a href="./CONTENT_GUIDE.md"><strong>Content guide →</strong></a>
-</p>
+Built with React + TypeScript + Vite, with bilingual support (EN/DE), subtle motion, and a clean editorial layout.
 
----
+## Live
 
-## Preview
+- Production URL: `https://0-uddeshya-0.github.io/portfolio/`
+- Planned domain: `uddeshya.de`
 
-<p align="center">
-  <a href="https://YOUR-DEPLOYED-SITE.example">
-    <img src="./docs/preview-placeholder.svg" alt="Portfolio preview — replace docs/preview.png after deploy" width="920" />
-  </a>
-</p>
+## Tech stack
 
-Add **`docs/preview.png`** (screenshot of your deployed site, ~1200px wide) and change the `<img src>` in this README from `preview-placeholder.svg` to `preview.png`. Replace **`https://YOUR-DEPLOYED-SITE.example`** with your real URL everywhere above.
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS
+- Framer Motion
+- React Router
 
-> GitHub READMEs do not embed live iframes; the image + link above is the standard way to make the repo feel like a “window” into the site. Clicking the preview opens your live build.
-
----
-
-## Quick start
+## Run locally
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open **http://localhost:5173**.
+Build production bundle:
 
 ```bash
-npm run build   # output in dist/
-npm run preview # serve production build locally
+npm run build
+npm run preview
 ```
 
----
+## Content update map
 
-## Stack
+- Core profile/projects/publications data: `src/data/portfolio.ts`
+- Language copy (EN/DE): `src/i18n/translations.ts`
+- Home layout: `src/pages/Home.tsx`
+- Projects page: `src/pages/Projects.tsx`
+- About page: `src/pages/About.tsx`
+- Contact + CV cards: `src/pages/Contact.tsx`
+- Static assets (photo/CV/book/sketches): `public/`
 
-| Layer | Choice |
-|--------|--------|
-| UI | React 19, Tailwind, Framer Motion |
-| Routing | React Router |
-| Icons | Lucide React |
+## Deployment
 
----
+This repo includes CI/CD workflows out of the box:
 
-## Where to edit content
+- CI: `.github/workflows/ci.yml`
+- GitHub Pages deploy: `.github/workflows/deploy-pages.yml`
+- Release workflow: `.github/workflows/release.yml`
 
-| Content | File / folder |
-|---------|----------------|
-| **Profile photo** | `public/profile.jpg` (path in `src/data/portfolio.ts` → `personalInfo.photo`) |
-| **Projects, bio, skills, publications** | `src/data/portfolio.ts` |
-| **Sketches / art images** | `public/sketches/` + `creativeWork` in `portfolio.ts` |
-| **Featured projects on home** | `src/pages/Home.tsx` (Featured Work section) |
+Detailed docs:
 
-Full step-by-step instructions: **[CONTENT_GUIDE.md](./CONTENT_GUIDE.md)**.
-Deployment instructions: **[docs/DEPLOYMENT.md](./docs/DEPLOYMENT.md)**.
-Repo hardening checklist: **[docs/REPO_HARDENING.md](./docs/REPO_HARDENING.md)**.
+- Deployment guide: `docs/DEPLOYMENT.md`
+- Repo hardening checklist: `docs/REPO_HARDENING.md`
 
----
+## Notes
 
-## Deploy
-
-### GitHub (professional setup with Actions)
-
-This repo now includes:
-
-- CI workflow: `.github/workflows/ci.yml` (lint + build on PR and main)
-- Deploy workflow: `.github/workflows/deploy-pages.yml` (auto deploy to GitHub Pages on main)
-- Node version pin: `.nvmrc`
-
-#### 1) Create and push a new GitHub repository
-
-```bash
-git init
-git add .
-git commit -m "Initial portfolio deployment setup"
-git branch -M main
-git remote add origin https://github.com/<your-username>/<your-repo>.git
-git push -u origin main
-```
-
-#### 2) Enable GitHub Pages
-
-1. Open your repo → **Settings** → **Pages**
-2. Under **Build and deployment**, choose **GitHub Actions**
-3. Push to `main` (or run workflow manually) to trigger deployment
-
-#### 3) Configure base path (important)
-
-- If using **custom domain** (recommended for `uddeshya.de`), set repo variable:
-  - Settings → Secrets and variables → Actions → Variables
-  - Add `VITE_BASE_PATH` = `/`
-- If using `https://<username>.github.io/<repo>/`, set:
-  - `VITE_BASE_PATH` = `/<repo>/`
-
-#### 4) Optional custom domain (`uddeshya.de`)
-
-1. In Pages settings, add custom domain `uddeshya.de`
-2. In your DNS provider:
-   - Add `A` records for GitHub Pages IPs
-   - Add `CNAME` for `www` to `<username>.github.io`
-3. Enable HTTPS in Pages settings
-
-#### 5) Verify
-
-- CI passes in the **Actions** tab
-- `Deploy to GitHub Pages` succeeds
-- Site opens at your Pages URL or custom domain
-
-### Other hosts (Vercel/Netlify/Cloudflare)
-
-- Build command: `npm run build`
-- Output directory: `dist`
-- Environment variable: `VITE_BASE_PATH=/`
+- For GitHub Pages on this repo, set `VITE_BASE_PATH=/portfolio/` in repository variables.
+- When you add the German CV, place it at `public/Resume-DE.pdf`.
 
 ---
 
-## License
-
-Private / personal portfolio — adjust as you like.
+If you are reading this as a recruiter or collaborator: thanks for stopping by.
