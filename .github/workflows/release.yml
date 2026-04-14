@@ -1,0 +1,83 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Semver tag to release (example: v1.0.0)'
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Determine release tag
+        id: meta
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "tag=${{ github.event.inputs.tag }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "tag=${GITHUB_REF#refs/tags/}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Ensure tag exists (manual dispatch)
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          git fetch --tags --force
+          if ! git rev-parse "${{ steps.meta.outputs.tag }}" >/dev/null 2>&1; then
+            git tag "${{ steps.meta.outputs.tag }}"
+            git push origin "${{ steps.meta.outputs.tag }}"
+          fi
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        env:
+          VITE_BASE_PATH: /
+        run: npm run build
+
+      - name: Package dist artifact
+        run: |
+          mkdir -p release
+          cp -r dist release/dist
+          cp README.md release/
+          cp docs/DEPLOYMENT.md release/
+          (cd release && zip -r "portfolio-${{ steps.meta.outputs.tag }}-dist.zip" dist README.md DEPLOYMENT.md)
+
+      - name: Generate release notes
+        id: notes
+        run: |
+          {
+            echo "## Portfolio release ${{ steps.meta.outputs.tag }}"
+            echo
+            echo "### Included"
+            echo "- Production-ready static build in \\`dist/\\`"
+            echo "- Deployment playbook"
+            echo "- GitHub Actions CI/CD workflows"
+          } > release-notes.md
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.meta.outputs.tag }}
+          name: ${{ steps.meta.outputs.tag }}
+          body_path: release-notes.md
+          files: release/portfolio-${{ steps.meta.outputs.tag }}-dist.zip
