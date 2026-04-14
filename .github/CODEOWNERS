@@ -1,0 +1,7 @@
+# Default ownership
+* @0-uddeshya-0
+
+# Critical infrastructure
+/.github/ @0-uddeshya-0
+/src/data/portfolio.ts @0-uddeshya-0
+/public/Resume*.pdf @0-uddeshya-0

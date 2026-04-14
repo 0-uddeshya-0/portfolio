@@ -1,0 +1,40 @@
+name: Bug report
+description: Report a reproducible defect
+labels: [bug]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Clear bug description and expected behavior.
+      placeholder: When I click X, Y happens; expected Z.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Go to ...
+        2. Click ...
+        3. Observe ...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      options:
+        - Local development
+        - GitHub Pages production
+        - Custom domain production
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Logs / screenshots
+      description: Paste console errors or attach screenshots.
