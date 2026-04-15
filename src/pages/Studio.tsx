@@ -79,7 +79,7 @@ export function Studio() {
         </motion.div>
 
         {/* Book feature */}
-        <section className="mb-16">
+        <section id="book" className="mb-16 scroll-mt-28">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -238,7 +238,7 @@ export function Studio() {
               exit={{ opacity: 0, scale: 0.98, y: 36 }}
               transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-warm-white rounded-t-3xl sm:rounded-3xl max-w-4xl w-full max-h-[calc(100dvh-4.5rem)] sm:max-h-[calc(100dvh-7rem)] overflow-y-auto shadow-2xl"
+              className="bg-warm-white rounded-t-3xl sm:rounded-3xl max-w-4xl w-full max-h-[calc(100dvh-4.5rem)] sm:max-h-[calc(100dvh-7rem)] overflow-y-auto modal-scrollbar-hidden shadow-2xl"
             >
               <div className="sticky top-0 bg-warm-white/96 backdrop-blur-md border-b border-light-beige p-4 sm:p-6 flex items-start justify-between gap-4 z-10">
                 <div className="min-w-0">
@@ -343,4 +343,3 @@ export function Studio() {
     </div>
   );
 }
-
