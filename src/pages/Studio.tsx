@@ -49,14 +49,18 @@ export function Studio() {
   const { t, lang } = useI18n();
   const [isBookOpen, setIsBookOpen] = useState(false);
   const [activeImg, setActiveImg] = useState(0);
+  const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
 
   const pub = publications[0];
   const localized = localizePublication(pub, lang);
-  const firstPoem = pub.poems?.[0];
 
   const moveGallery = (dir: 1 | -1) => {
     setActiveImg((curr) => (curr + dir + BOOK_GALLERY.length) % BOOK_GALLERY.length);
   };
+
+  const shortDescription = localized.longDescription.length > 260
+    ? `${localized.longDescription.slice(0, 260).trim()}...`
+    : localized.longDescription;
 
   return (
     <div className="pt-24 pb-24 px-4 sm:px-6 lg:px-12">
@@ -90,7 +94,11 @@ export function Studio() {
 
           <button
             type="button"
-            onClick={() => setIsBookOpen(true)}
+            onClick={() => {
+              setIsBookOpen(true);
+              setIsDescriptionExpanded(false);
+              setActiveImg(0);
+            }}
             className="w-full text-left group"
           >
             <div className="bg-warm-white rounded-3xl border border-light-beige shadow-card hover:shadow-hover transition-all duration-500 overflow-hidden">
@@ -221,7 +229,7 @@ export function Studio() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[70] flex items-end sm:items-center justify-center p-2 sm:p-4 bg-charcoal/60 backdrop-blur-md"
+            className="fixed inset-0 z-[70] flex items-end sm:items-center justify-center p-0 sm:p-4 bg-charcoal/60 backdrop-blur-md"
             onClick={() => setIsBookOpen(false)}
           >
             <motion.div
@@ -230,7 +238,7 @@ export function Studio() {
               exit={{ opacity: 0, scale: 0.98, y: 36 }}
               transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-warm-white rounded-t-3xl sm:rounded-3xl max-w-4xl w-full max-h-[94vh] sm:max-h-[90vh] overflow-y-auto shadow-2xl"
+              className="bg-warm-white rounded-t-3xl sm:rounded-3xl max-w-4xl w-full max-h-[calc(100dvh-4.5rem)] sm:max-h-[90vh] overflow-y-auto shadow-2xl"
             >
               <div className="sticky top-0 bg-warm-white/96 backdrop-blur-md border-b border-light-beige p-4 sm:p-6 flex items-start justify-between gap-4 z-10">
                 <div className="min-w-0">
@@ -238,7 +246,18 @@ export function Studio() {
                     {localized.type} · {localized.year} · {localized.publisher}
                   </p>
                   <h3 className="font-heading text-2xl sm:text-3xl text-charcoal">{localized.title}</h3>
-                  <p className="text-soft-gray mt-1 line-clamp-3 sm:line-clamp-none">{localized.longDescription}</p>
+                  <p className="text-soft-gray mt-1 leading-relaxed">
+                    {isDescriptionExpanded ? localized.longDescription : shortDescription}
+                  </p>
+                  {localized.longDescription.length > 260 && (
+                    <button
+                      type="button"
+                      onClick={() => setIsDescriptionExpanded((prev) => !prev)}
+                      className="mt-2 text-sm font-medium text-muted-sage hover:text-charcoal transition-smooth"
+                    >
+                      {isDescriptionExpanded ? 'Show less' : 'Show more'}
+                    </button>
+                  )}
                 </div>
                 <button
                   type="button"
@@ -257,7 +276,7 @@ export function Studio() {
                     <span className="text-xs font-mono uppercase tracking-wider text-charcoal/50">{t('studio.gallery')}</span>
                   </div>
 
-                  <div className="grid lg:grid-cols-[1fr,220px] gap-4">
+                  <div className="space-y-4">
                     <div className="rounded-2xl overflow-hidden bg-warm-white border border-light-beige relative">
                       <img
                         src={BOOK_GALLERY[Math.min(activeImg, BOOK_GALLERY.length - 1)]}
@@ -272,8 +291,8 @@ export function Studio() {
                         </p>
                       </div>
                     </div>
-                    <div className="space-y-3">
-                      <div className="grid grid-cols-4 lg:grid-cols-2 gap-3">
+                    <div className="flex items-center justify-between gap-3">
+                      <div className="grid grid-cols-4 gap-2 sm:gap-3 flex-1">
                         {BOOK_GALLERY.map((src, idx) => (
                           <button
                             type="button"
@@ -284,11 +303,11 @@ export function Studio() {
                             }`}
                             aria-label={`Image ${idx + 1}`}
                           >
-                            <img src={src} alt="" className="w-full h-20 sm:h-24 object-cover" loading="lazy" decoding="async" />
+                            <img src={src} alt="" className="w-full h-16 sm:h-20 object-cover" loading="lazy" decoding="async" />
                           </button>
                         ))}
                       </div>
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-2 shrink-0">
                         <button
                           type="button"
                           onClick={() => moveGallery(-1)}
@@ -309,16 +328,6 @@ export function Studio() {
                     </div>
                   </div>
                 </div>
-
-                {firstPoem && (
-                  <div className="bg-warm-white border border-light-beige rounded-3xl p-5 sm:p-6">
-                    <p className="text-xs font-mono uppercase tracking-wider text-soft-gray mb-2">{t('studio.poemPreview')}</p>
-                    <h4 className="font-heading text-lg text-charcoal mb-3">{firstPoem.title}</h4>
-                    <p className="text-charcoal/80 leading-relaxed whitespace-pre-line">
-                      {firstPoem.lines.slice(0, 6).join('\n')}
-                    </p>
-                  </div>
-                )}
 
                 <div className="flex flex-wrap items-center gap-3">
                   <span className="text-xs font-mono text-soft-gray uppercase tracking-wider mr-1">{t('studio.availableOn')}</span>

@@ -457,7 +457,7 @@ export const publications = [
     description:
       "A debut poetry collection exploring consciousness, emotion, and the tender contradictions of being human. Written in moments between deadlines and design sprints.",
     longDescription:
-      "Published through Writersgram Publications, Brain's Heart is a collection of poems that sit somewhere between introspection and observation — examining how people relate to machines, to memory, and to each other. Writing and building software share more than most people admit: both require precision in service of feeling.",
+      "Published by Writersgram Publications, Brain's Heart, a Poet is a debut collection written across seasons of study, building, and reflection. The poems move between solitude and connection, technology and tenderness, and the quiet tension between ambition and vulnerability. It is a personal body of work that balances structure with emotion—much like product building, where clarity matters, but human resonance matters more.",
     links: {
       googlePlay: "https://books.google.com/books/about/Brain_s_heart_a_poet.html?id=eI5NEAAAQBAJ",
       amazon: "https://amzn.to/3y42xy7",
@@ -535,7 +535,7 @@ const publicationGermanOverrides: Record<
     description:
       "Ein Debutband uber Bewusstsein, Emotion und die stillen Widerspruche des Menschseins - geschrieben zwischen Studium, Projekten und Produktarbeit.",
     longDescription:
-      "Veroffentlicht bei Writersgram Publications. Brain's Heart bewegt sich zwischen Introspektion und Beobachtung: Beziehung zu Erinnerung, Sprache, Technik und Nahe. Wie im Engineering geht es auch im Schreiben um Struktur - aber mit Wirkung beim Menschen.",
+      "Veroffentlicht bei Writersgram Publications. Brain's Heart, a Poet ist ein Debutband, entstanden zwischen Studium, Produktarbeit und personlichen Umbruchen. Die Texte bewegen sich zwischen Introspektion und Beobachtung: Nahe und Distanz, Technologie und Menschlichkeit, Anspruch und Verletzlichkeit. Wie im Engineering geht es auch hier um Struktur - aber immer mit Wirkung beim Menschen.",
     tags: ["Lyrik", "Publizierter Autor", "Writersgram Publications"],
   },
 };
