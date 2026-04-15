@@ -3,6 +3,7 @@ import { Layout } from './components/layout/Layout';
 import { Home } from './pages/Home';
 import { Projects } from './pages/Projects';
 import { About } from './pages/About';
+import { Studio } from './pages/Studio';
 import { Contact } from './pages/Contact';
 import { LanguageProvider } from './i18n/context';
 import './App.css';
@@ -36,6 +37,7 @@ const router = createBrowserRouter([
       { index: true, element: <Home /> },
       { path: 'projects', element: <Projects /> },
       { path: 'about', element: <About /> },
+      { path: 'studio', element: <Studio /> },
       { path: 'contact', element: <Contact /> },
       { path: '*', element: <RouteErrorFallback /> },
     ],

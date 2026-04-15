@@ -7,6 +7,7 @@ export const translations = {
       home: 'Home',
       projects: 'Projects',
       about: 'About',
+      studio: 'Studio',
       contact: 'Contact',
     },
     layout: {
@@ -126,12 +127,11 @@ export const translations = {
       title: 'The story so far',
       intro:
         'I build data and AI systems with an eye on the messy real world — architecture you can explain, and outcomes you can measure.',
-      tabs: {
-        craft: 'Engineering Atlas',
-        studio: 'Studio Journal',
-        craftHint: 'Technical systems, delivery, and operating rigor.',
-        studioHint: 'Writing, sketches, and the creative process behind the work.',
-      },
+      studioCtaKicker: 'Beyond work',
+      studioCtaTitle: 'Writing, sketches & interests',
+      studioCtaBody:
+        'A small window into how I think when I’m not shipping code — published writing, visual work, and the habits that keep me curious.',
+      studioCtaLink: 'Open Studio',
       sections: {
         approach: 'Approach',
         howIBuild: 'How I build',
@@ -185,12 +185,30 @@ export const translations = {
         toolsPlatforms: 'Tools & platforms',
       },
     },
+    studio: {
+      kicker: 'Studio',
+      title: 'Beyond the build',
+      intro:
+        'A quieter side of my work: published writing, visual studies, and the small interests that keep my curiosity sharp.',
+      bookKicker: 'Written work',
+      bookOpen: 'Open feature',
+      gallery: 'Gallery',
+      interestsKicker: 'Interests',
+      interestsTitle: 'What I recharge with',
+      interests: {
+        travel: 'Travel & new places',
+        reading: 'Reading (non-fiction + poetry)',
+        cooking: 'Cooking',
+        learning: 'Learning new things',
+      },
+    },
   },
   de: {
     nav: {
       home: 'Start',
       projects: 'Projekte',
       about: 'Über mich',
+      studio: 'Studio',
       contact: 'Kontakt',
     },
     layout: {
@@ -310,12 +328,11 @@ export const translations = {
       title: 'Bisherige Stationen',
       intro:
         'Ich entwickle Daten- und KI-Systeme mit Blick auf die unaufgeräumte Realität — Architektur, die man erklären kann, und Resultate, die man messen kann.',
-      tabs: {
-        craft: 'Engineering Atlas',
-        studio: 'Studio Journal',
-        craftHint: 'Technische Systeme, Delivery und belastbarer Betrieb.',
-        studioHint: 'Schreiben, Skizzen und der kreative Prozess hinter der Arbeit.',
-      },
+      studioCtaKicker: 'Neben dem Beruf',
+      studioCtaTitle: 'Schreiben, Skizzen & Interessen',
+      studioCtaBody:
+        'Ein kleiner Einblick, wie ich denke, wenn ich nicht gerade Code shippe — publiziertes Schreiben, visuelle Arbeit und Gewohnheiten, die mich neugierig halten.',
+      studioCtaLink: 'Studio öffnen',
       sections: {
         approach: 'Arbeitsweise',
         howIBuild: 'Wie ich baue',
@@ -367,6 +384,23 @@ export const translations = {
         dataEng: 'Data & Engineering',
         designProduct: 'Design & Produkt',
         toolsPlatforms: 'Tools & Plattformen',
+      },
+    },
+    studio: {
+      kicker: 'Studio',
+      title: 'Neben dem Build',
+      intro:
+        'Die ruhigere Seite: publiziertes Schreiben, visuelle Studien und die kleinen Interessen, die meine Neugier wach halten.',
+      bookKicker: 'Texte & Buch',
+      bookOpen: 'Feature öffnen',
+      gallery: 'Galerie',
+      interestsKicker: 'Interessen',
+      interestsTitle: 'Womit ich auftanke',
+      interests: {
+        travel: 'Reisen & neue Orte',
+        reading: 'Lesen (Sachbücher + Lyrik)',
+        cooking: 'Kochen',
+        learning: 'Neues lernen',
       },
     },
   },

@@ -11,6 +11,7 @@ const navPaths = [
   { key: 'nav.home', href: '/' },
   { key: 'nav.projects', href: '/projects' },
   { key: 'nav.about', href: '/about' },
+  { key: 'nav.studio', href: '/studio' },
   { key: 'nav.contact', href: '/contact' },
 ] as const;
 
@@ -87,7 +88,9 @@ export function Layout() {
           animate={{ y: 0 }}
           transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
           className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-            isScrolled ? 'bg-warm-white/90 backdrop-blur-xl shadow-soft' : 'bg-transparent'
+            isScrolled || location.pathname !== '/'
+              ? 'bg-warm-white/92 backdrop-blur-xl shadow-soft'
+              : 'bg-transparent'
           }`}
         >
           <div className="px-6 lg:px-12">

@@ -220,7 +220,7 @@ export function Projects() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-2 sm:p-4 bg-charcoal/60 backdrop-blur-md"
+            className="fixed inset-0 z-[70] flex items-end sm:items-center justify-center p-2 sm:p-4 bg-charcoal/60 backdrop-blur-md"
             onClick={() => setSelected(null)}
           >
             <motion.div
@@ -233,7 +233,7 @@ export function Projects() {
             >
               {/* Header */}
               <div className="sticky top-0 bg-warm-white/96 backdrop-blur-md border-b border-light-beige p-4 sm:p-6 lg:p-8 flex items-start justify-between z-10">
-                <div className="flex-1 pr-4">
+                <div className="flex-1 pr-3 sm:pr-4">
                   <div className="flex items-center gap-3 mb-2 flex-wrap">
                     <span className="text-xs font-mono text-muted-sage uppercase tracking-wider">{selectedProject.category}</span>
                     <span className="text-xs text-soft-gray">{selectedProject.year}</span>
@@ -251,7 +251,8 @@ export function Projects() {
                 </div>
                 <button
                   onClick={() => setSelected(null)}
-                  className="w-11 h-11 rounded-xl bg-light-beige flex items-center justify-center text-charcoal hover:bg-muted-sage hover:text-warm-white transition-smooth flex-shrink-0"
+                  className="w-11 h-11 rounded-xl bg-light-beige flex items-center justify-center text-charcoal hover:bg-muted-sage hover:text-warm-white transition-smooth flex-shrink-0 ring-1 ring-charcoal/5"
+                  aria-label={t('projects.close')}
                 >
                   <X className="w-5 h-5" />
                 </button>
