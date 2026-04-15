@@ -452,7 +452,7 @@ export const publications = [
     title: "Brain's Heart, a Poet",
     type: "Poetry Collection",
     publisher: "Writersgram Publications",
-    year: "2023",
+    year: "2021",
     coverImage: getAssetPath("book-cover.png"),
     description:
       "A debut poetry collection exploring consciousness, emotion, and the tender contradictions of being human. Written in moments between deadlines and design sprints.",

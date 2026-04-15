@@ -435,7 +435,7 @@ export function Home() {
               </span>
               <h2 className="font-heading text-3xl lg:text-4xl text-charcoal mb-4">{t('home.publication.title')}</h2>
               <p className="text-soft-gray leading-relaxed mb-6 max-w-md">{t('home.publication.body')}</p>
-              <Link to="/about#publications">
+              <Link to="/studio#book">
                 <motion.button
                   whileHover={{ scale: 1.02, x: 3 }}
                   className="inline-flex items-center gap-2 text-charcoal hover:text-muted-sage transition-smooth group font-medium text-sm"

@@ -12,7 +12,6 @@ import {
   PenLine,
   Scale,
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import {
   certifications,
   education,
@@ -60,29 +59,6 @@ export function About() {
           </span>
           <h1 className="font-heading text-4xl lg:text-6xl text-charcoal mb-6">{t('about.title')}</h1>
           <p className="text-soft-gray text-lg max-w-2xl leading-relaxed">{t('about.intro')}</p>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 18 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.55 }}
-          className="mb-12"
-        >
-          <div className="bg-light-beige/35 border border-light-beige rounded-3xl p-5 sm:p-7 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-            <div>
-              <p className="text-xs font-mono uppercase tracking-wider text-muted-sage mb-2">{t('about.studioCtaKicker')}</p>
-              <h2 className="font-heading text-xl sm:text-2xl text-charcoal">{t('about.studioCtaTitle')}</h2>
-              <p className="text-soft-gray mt-2 max-w-2xl">{t('about.studioCtaBody')}</p>
-            </div>
-            <Link
-              to="/studio"
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-charcoal text-warm-white hover:bg-charcoal/90 transition-smooth shadow-soft"
-            >
-              {t('about.studioCtaLink')}
-              <ExternalLink className="w-4 h-4" />
-            </Link>
-          </div>
         </motion.div>
 
         <section className="mb-16 sm:mb-20">
