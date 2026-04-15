@@ -205,7 +205,14 @@ export function Home() {
                   transition={{ duration: 0.5, delay: 0.52 }}
                   className="flex flex-wrap gap-2 pt-6"
                 >
-                  {['Python', 'LangChain', 'FastAPI', 'NLP', 'Design Thinking', 'Supabase'].map((tag) => (
+                  {[
+                    'AI Systems Design',
+                    'LLM Evaluation',
+                    'Data Engineering',
+                    'FastAPI',
+                    'NLP',
+                    'Process Optimization',
+                  ].map((tag) => (
                     <span
                       key={tag}
                       className="px-3 py-1.5 bg-light-beige/60 rounded-full text-xs font-mono text-charcoal/60"
