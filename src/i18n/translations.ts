@@ -298,7 +298,7 @@ export const translations = {
       downloadLabel: 'Download',
       resumeEnglish: 'Lebenslauf (Englisch, PDF)',
       resumeGerman: 'Lebenslauf (Deutsch, PDF)',
-      cvHint: 'Lege die deutsche Version spater unter `public/Resume-DE.pdf` ab.',
+      cvHint: 'Lege die deutsche Version später unter `public/Resume-DE.pdf` ab.',
       downloadCv: 'Lebenslauf laden',
       responseTime: 'In der Regel antworte ich innerhalb von 24–48 Stunden.',
       rightsSuffix: 'Für Menschen gebaut – überall.',
