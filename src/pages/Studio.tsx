@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { BookOpen, ExternalLink, ImageIcon, ShoppingCart, Sparkles, X } from 'lucide-react';
-import { getAssetPath, localizePublication, publications } from '../data/portfolio';
+import { BookOpen, ChevronLeft, ChevronRight, ExternalLink, ImageIcon, ShoppingCart, Sparkles, X } from 'lucide-react';
+import { creativeWork, getAssetPath, localizePublication, publications } from '../data/portfolio';
 import { useI18n } from '../i18n/context';
 
 const BOOK_GALLERY = [
@@ -9,6 +9,25 @@ const BOOK_GALLERY = [
   getAssetPath('book-showcase/cover-2.png'),
   getAssetPath('book-showcase/cover-3.png'),
   getAssetPath('book-showcase/cover-4.png'),
+];
+
+const SKETCH_GALLERY = [
+  { id: 'maasi', src: getAssetPath('sketches/maasi.png'), subject: 'Portrait Study' },
+  { id: 'shreyashi', src: getAssetPath('sketches/shreyashi.png'), subject: 'Portrait Study' },
+  { id: 'mountains', src: getAssetPath('sketches/mountains.png'), subject: 'Ink Mountains' },
+  { id: 'pastel-sky', src: getAssetPath('sketches/pastel-sky.png'), subject: 'Acrylic Sky' },
+  { id: 'masi', src: getAssetPath('sketches/masi.png'), subject: 'Portrait Study' },
+  { id: 'dadu', src: getAssetPath('sketches/dadu.png'), subject: 'Portrait Study' },
+  { id: 'rishabh', src: getAssetPath('sketches/rishabh.png'), subject: 'Portrait Study' },
+  { id: 'isha', src: getAssetPath('sketches/isha.png'), subject: 'Portrait Study' },
+  { id: 'munni', src: getAssetPath('sketches/munni.png'), subject: 'Portrait Study' },
+  ...creativeWork.series.flatMap((series) =>
+    series.pieces.map((piece) => ({
+      id: `${series.id}-${piece.id}`,
+      src: piece.src,
+      subject: piece.subject,
+    }))
+  ),
 ];
 
 function BuyButton({ href, label }: { href: string; label: string }) {
@@ -33,6 +52,11 @@ export function Studio() {
 
   const pub = publications[0];
   const localized = localizePublication(pub, lang);
+  const firstPoem = pub.poems?.[0];
+
+  const moveGallery = (dir: 1 | -1) => {
+    setActiveImg((curr) => (curr + dir + BOOK_GALLERY.length) % BOOK_GALLERY.length);
+  };
 
   return (
     <div className="pt-24 pb-24 px-4 sm:px-6 lg:px-12">
@@ -114,6 +138,47 @@ export function Studio() {
           </button>
         </section>
 
+        {/* Sketches */}
+        <section className="mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.55 }}
+            className="mb-8"
+          >
+            <span className="text-sm font-mono text-muted-sage uppercase tracking-wider mb-2 block">
+              {t('studio.sketchesKicker')}
+            </span>
+            <h2 className="font-heading text-2xl lg:text-3xl text-charcoal">{t('studio.sketchesTitle')}</h2>
+            <p className="text-soft-gray mt-2 max-w-2xl">{t('studio.sketchesBody')}</p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
+            {SKETCH_GALLERY.map((piece, i) => (
+              <motion.div
+                key={piece.id}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.35, delay: i * 0.02 }}
+                className="group"
+              >
+                <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-light-beige/60 border border-light-beige/80 hover:shadow-card transition-all duration-500">
+                  <img
+                    src={piece.src}
+                    alt={piece.subject}
+                    className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <p className="mt-2 px-1 text-sm text-charcoal/70">{piece.subject}</p>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+
         {/* Interests */}
         <section className="mb-4">
           <motion.div
@@ -173,7 +238,7 @@ export function Studio() {
                     {localized.type} · {localized.year} · {localized.publisher}
                   </p>
                   <h3 className="font-heading text-2xl sm:text-3xl text-charcoal">{localized.title}</h3>
-                  <p className="text-soft-gray mt-1">{localized.longDescription}</p>
+                  <p className="text-soft-gray mt-1 line-clamp-3 sm:line-clamp-none">{localized.longDescription}</p>
                 </div>
                 <button
                   type="button"
@@ -186,14 +251,14 @@ export function Studio() {
               </div>
 
               <div className="p-4 sm:p-6 space-y-6">
-                <div className="bg-light-beige/35 border border-light-beige rounded-3xl p-4 sm:p-6">
+                <div className="bg-gradient-to-br from-light-beige/55 via-light-beige/35 to-muted-sage/10 border border-light-beige rounded-3xl p-4 sm:p-6">
                   <div className="flex items-center gap-2 mb-4">
                     <BookOpen className="w-4 h-4 text-muted-sage" />
                     <span className="text-xs font-mono uppercase tracking-wider text-charcoal/50">{t('studio.gallery')}</span>
                   </div>
 
                   <div className="grid lg:grid-cols-[1fr,220px] gap-4">
-                    <div className="rounded-2xl overflow-hidden bg-warm-white border border-light-beige">
+                    <div className="rounded-2xl overflow-hidden bg-warm-white border border-light-beige relative">
                       <img
                         src={BOOK_GALLERY[Math.min(activeImg, BOOK_GALLERY.length - 1)]}
                         alt=""
@@ -201,27 +266,62 @@ export function Studio() {
                         loading="lazy"
                         decoding="async"
                       />
+                      <div className="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-charcoal/60 to-transparent">
+                        <p className="text-warm-white text-xs font-mono">
+                          {activeImg + 1} / {BOOK_GALLERY.length}
+                        </p>
+                      </div>
                     </div>
-                    <div className="grid grid-cols-4 lg:grid-cols-2 gap-3">
-                      {BOOK_GALLERY.map((src, idx) => (
+                    <div className="space-y-3">
+                      <div className="grid grid-cols-4 lg:grid-cols-2 gap-3">
+                        {BOOK_GALLERY.map((src, idx) => (
+                          <button
+                            type="button"
+                            key={src}
+                            onClick={() => setActiveImg(idx)}
+                            className={`rounded-2xl overflow-hidden border transition-smooth ${
+                              idx === activeImg ? 'border-muted-sage shadow-xs' : 'border-light-beige hover:border-muted-sage/40'
+                            }`}
+                            aria-label={`Image ${idx + 1}`}
+                          >
+                            <img src={src} alt="" className="w-full h-20 sm:h-24 object-cover" loading="lazy" decoding="async" />
+                          </button>
+                        ))}
+                      </div>
+                      <div className="flex items-center gap-2">
                         <button
                           type="button"
-                          key={src}
-                          onClick={() => setActiveImg(idx)}
-                          className={`rounded-2xl overflow-hidden border transition-smooth ${
-                            idx === activeImg ? 'border-muted-sage shadow-xs' : 'border-light-beige hover:border-muted-sage/40'
-                          }`}
-                          aria-label={`Image ${idx + 1}`}
+                          onClick={() => moveGallery(-1)}
+                          className="w-10 h-10 rounded-xl bg-warm-white border border-light-beige flex items-center justify-center text-charcoal hover:border-muted-sage/40 transition-smooth"
+                          aria-label="Previous image"
                         >
-                          <img src={src} alt="" className="w-full h-20 sm:h-24 object-cover" loading="lazy" decoding="async" />
+                          <ChevronLeft className="w-4 h-4" />
                         </button>
-                      ))}
+                        <button
+                          type="button"
+                          onClick={() => moveGallery(1)}
+                          className="w-10 h-10 rounded-xl bg-warm-white border border-light-beige flex items-center justify-center text-charcoal hover:border-muted-sage/40 transition-smooth"
+                          aria-label="Next image"
+                        >
+                          <ChevronRight className="w-4 h-4" />
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
 
+                {firstPoem && (
+                  <div className="bg-warm-white border border-light-beige rounded-3xl p-5 sm:p-6">
+                    <p className="text-xs font-mono uppercase tracking-wider text-soft-gray mb-2">{t('studio.poemPreview')}</p>
+                    <h4 className="font-heading text-lg text-charcoal mb-3">{firstPoem.title}</h4>
+                    <p className="text-charcoal/80 leading-relaxed whitespace-pre-line">
+                      {firstPoem.lines.slice(0, 6).join('\n')}
+                    </p>
+                  </div>
+                )}
+
                 <div className="flex flex-wrap items-center gap-3">
-                  <span className="text-xs font-mono text-soft-gray uppercase tracking-wider mr-1">Available on</span>
+                  <span className="text-xs font-mono text-soft-gray uppercase tracking-wider mr-1">{t('studio.availableOn')}</span>
                   <BuyButton href={localized.links.googlePlay} label="Google Play Books" />
                   <BuyButton href={localized.links.amazon} label="Amazon" />
                   <BuyButton href={localized.links.flipkart} label="Flipkart" />

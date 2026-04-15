@@ -193,6 +193,12 @@ export const translations = {
       bookKicker: 'Written work',
       bookOpen: 'Open feature',
       gallery: 'Gallery',
+      sketchesKicker: 'Visual work',
+      sketchesTitle: 'Sketches & paintings',
+      sketchesBody:
+        'Portrait studies, landscapes, and acrylic/ink experiments that sharpen observation and patience.',
+      availableOn: 'Available on',
+      poemPreview: 'Poem preview',
       interestsKicker: 'Interests',
       interestsTitle: 'What I recharge with',
       interests: {
@@ -394,6 +400,12 @@ export const translations = {
       bookKicker: 'Texte & Buch',
       bookOpen: 'Feature öffnen',
       gallery: 'Galerie',
+      sketchesKicker: 'Visuelle Arbeiten',
+      sketchesTitle: 'Skizzen & Malerei',
+      sketchesBody:
+        'Porträtstudien, Landschaften und Acryl-/Tusche-Experimente, die Beobachtung und Geduld schärfen.',
+      availableOn: 'Erhältlich bei',
+      poemPreview: 'Gedichtvorschau',
       interestsKicker: 'Interessen',
       interestsTitle: 'Womit ich auftanke',
       interests: {
