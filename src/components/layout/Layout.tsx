@@ -60,6 +60,17 @@ export function Layout() {
   const location = useLocation();
   const { t } = useI18n();
 
+  // Reset mobile menu on route changes.
+  // Using the "adjust state during render" pattern from the React docs
+  // (https://react.dev/learn/you-might-not-need-an-effect#adjusting-some-state-when-a-prop-changes)
+  // rather than a useEffect, because calling setState synchronously inside an effect
+  // triggers the react-hooks/set-state-in-effect lint rule and causes an extra render cycle.
+  const [prevPathname, setPrevPathname] = useState(location.pathname);
+  if (prevPathname !== location.pathname) {
+    setPrevPathname(location.pathname);
+    setIsMenuOpen(false);
+  }
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -67,10 +78,6 @@ export function Layout() {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  useEffect(() => {
-    setIsMenuOpen(false);
-  }, [location]);
 
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? 'hidden' : '';

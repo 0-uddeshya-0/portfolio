@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   X,
-  ArrowUpRight,
   CheckCircle2,
   Layers,
   Cpu,
@@ -109,8 +108,8 @@ export function Projects() {
               className="group cursor-pointer"
             >
               <div className="bg-light-beige/50 rounded-3xl p-5 sm:p-7 lg:p-8 hover:bg-light-beige hover:shadow-hover transition-all duration-500 h-full border border-transparent hover:border-muted-sage/20">
-                <div className="flex items-start justify-between mb-5 sm:mb-6">
-                  <div className="flex-1 min-w-0">
+                <div className="mb-5 sm:mb-6">
+                  <div className="min-w-0">
                     <div className="flex items-center gap-3 mb-3 flex-wrap">
                       <span className="text-xs font-mono text-muted-sage uppercase tracking-wider">{localized.category}</span>
                       <span className="text-xs text-soft-gray">{localized.year}</span>
@@ -131,12 +130,6 @@ export function Projects() {
                       <p className="text-xs font-mono text-soft-gray/60 mt-1">{localized.context}</p>
                     )}
                   </div>
-                  <motion.div
-                    className="w-11 h-11 rounded-xl bg-warm-white flex items-center justify-center shadow-xs group-hover:bg-muted-sage group-hover:text-warm-white transition-smooth flex-shrink-0 ml-4"
-                    whileHover={{ rotate: 45 }}
-                  >
-                    <ArrowUpRight className="w-5 h-5" />
-                  </motion.div>
                 </div>
 
                 <p className="text-charcoal/70 leading-relaxed mb-6 text-sm line-clamp-2">{localized.description}</p>
