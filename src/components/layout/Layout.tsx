@@ -60,7 +60,11 @@ export function Layout() {
   const location = useLocation();
   const { t } = useI18n();
 
-  // Close the mobile menu whenever the route changes (derived-state update during render).
+  // Reset mobile menu on route changes.
+  // Using the "adjust state during render" pattern from the React docs
+  // (https://react.dev/learn/you-might-not-need-an-effect#adjusting-some-state-when-a-prop-changes)
+  // rather than a useEffect, because calling setState synchronously inside an effect
+  // triggers the react-hooks/set-state-in-effect lint rule and causes an extra render cycle.
   const [prevPathname, setPrevPathname] = useState(location.pathname);
   if (prevPathname !== location.pathname) {
     setPrevPathname(location.pathname);
