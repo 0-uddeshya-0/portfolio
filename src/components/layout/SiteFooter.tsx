@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Github, Linkedin, Mail, MapPin } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 import { personalInfo } from '../../data/portfolio';
 import { useI18n } from '../../i18n/context';
 
@@ -37,18 +37,14 @@ export function SiteFooter() {
               {t('layout.footerTagline')}
             </p>
 
-            <div className="mt-5 flex flex-wrap gap-2">
+            <div className="mt-5">
               <a
                 href={`mailto:${personalInfo.email}`}
-                className="inline-flex items-center gap-2 px-4 py-2.5 bg-warm-white border border-light-beige rounded-xl text-sm text-charcoal/70 hover:text-charcoal hover:border-charcoal/15 transition-smooth shadow-xs"
+                className="inline-flex items-center gap-2 text-sm text-charcoal/70 hover:text-charcoal transition-smooth"
               >
                 <Mail className="w-4 h-4 text-muted-sage" />
                 {personalInfo.email}
               </a>
-              <span className="inline-flex items-center gap-2 px-4 py-2.5 bg-warm-white border border-light-beige rounded-xl text-sm text-charcoal/70 shadow-xs">
-                <MapPin className="w-4 h-4 text-muted-sage" />
-                {personalInfo.location}
-              </span>
             </div>
           </div>
 
@@ -70,30 +66,24 @@ export function SiteFooter() {
 
             <div>
               <p className="text-xs font-mono uppercase tracking-wider text-soft-gray mb-3">Elsewhere</p>
-              <div className="flex flex-col gap-2">
+              <div className="flex items-center gap-4">
                 <a
                   href={personalInfo.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-between gap-3 px-4 py-3 bg-warm-white border border-light-beige rounded-2xl text-sm text-charcoal/70 hover:text-charcoal hover:border-charcoal/15 transition-smooth shadow-xs"
+                  className="inline-flex items-center text-charcoal/70 hover:text-charcoal transition-smooth"
+                  aria-label="GitHub"
                 >
-                  <span className="inline-flex items-center gap-2">
-                    <Github className="w-4 h-4 text-muted-sage" />
-                    GitHub
-                  </span>
-                  <span className="text-xs font-mono text-soft-gray">0-uddeshya-0</span>
+                  <Github className="w-5 h-5" />
                 </a>
                 <a
                   href={personalInfo.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-between gap-3 px-4 py-3 bg-warm-white border border-light-beige rounded-2xl text-sm text-charcoal/70 hover:text-charcoal hover:border-charcoal/15 transition-smooth shadow-xs"
+                  className="inline-flex items-center text-charcoal/70 hover:text-charcoal transition-smooth"
+                  aria-label="LinkedIn"
                 >
-                  <span className="inline-flex items-center gap-2">
-                    <Linkedin className="w-4 h-4 text-muted-sage" />
-                    LinkedIn
-                  </span>
-                  <span className="text-xs font-mono text-soft-gray">Connect</span>
+                  <Linkedin className="w-5 h-5" />
                 </a>
               </div>
             </div>
@@ -101,10 +91,8 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-10 pt-6 border-t border-light-beige flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs sm:text-sm text-soft-gray">
-          <p>
-            © {year} {personalInfo.name}. {t('layout.footerRights')}
-          </p>
-          <p className="text-soft-gray/90">A calm interface for a noisy world.</p>
+          <p>© {year} {personalInfo.name}</p>
+          <p className="text-soft-gray/90">{t('layout.footerTagline')}</p>
         </div>
       </div>
     </footer>

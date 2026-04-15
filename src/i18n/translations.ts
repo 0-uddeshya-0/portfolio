@@ -16,7 +16,7 @@ export const translations = {
       switchToGerman: 'Deutsch',
       footerTagline: 'Built with intention. Designed with care.',
       footerRights: 'All rights reserved.',
-      footerLocation: 'Built with care in Ulm',
+      footerLocation: 'Open to global opportunities',
     },
     home: {
       badge: 'Open to opportunities',
@@ -223,7 +223,7 @@ export const translations = {
       switchToGerman: 'Deutsch',
       footerTagline: 'Mit Absicht gebaut. Mit Sorgfalt gestaltet.',
       footerRights: 'Alle Rechte vorbehalten.',
-      footerLocation: 'Mit Sorgfalt aus Ulm',
+      footerLocation: 'Offen für Möglichkeiten weltweit',
     },
     home: {
       badge: 'Offen für passende Rollen',

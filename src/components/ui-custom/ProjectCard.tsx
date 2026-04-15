@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { ArrowUpRight } from 'lucide-react';
 
 interface ProjectCardProps {
   title: string;
@@ -38,7 +37,7 @@ export function ProjectCard({
     >
       <div className="bg-light-beige/50 rounded-2xl p-6 lg:p-8 shadow-card hover:shadow-hover transition-smooth border border-transparent hover:border-muted-sage/20">
         {/* Header */}
-        <div className="flex items-start justify-between mb-4">
+        <div className="mb-4">
           <div>
             <div className="flex items-center gap-3 mb-2 flex-wrap">
               <span className="text-xs font-mono text-muted-sage uppercase tracking-wider">
@@ -61,13 +60,6 @@ export function ProjectCard({
             </h3>
             <p className="text-sm text-soft-gray mt-1">{subtitle}</p>
           </div>
-          <motion.div
-            className="w-10 h-10 rounded-full bg-warm-white flex items-center justify-center shadow-xs group-hover:bg-muted-sage group-hover:text-warm-white transition-smooth"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <ArrowUpRight className="w-5 h-5" />
-          </motion.div>
         </div>
 
         {/* Description */}
