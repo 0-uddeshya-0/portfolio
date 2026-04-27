@@ -11,7 +11,7 @@ Built with React + TypeScript + Vite, with bilingual support (EN/DE), subtle mot
 ## Live
 
 - Production URL: `https://0-uddeshya-0.github.io/portfolio/`
-- Planned domain: `uddeshya.de`
+- Planned domain: `uddeshyasingh.com`
 
 ## Tech stack
 
