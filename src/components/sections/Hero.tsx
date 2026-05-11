@@ -30,7 +30,7 @@ export function Hero() {
             >
               <span className="inline-flex items-center gap-2 px-4 py-2 bg-light-beige rounded-full text-sm font-mono text-muted-sage">
                 <span className="w-2 h-2 bg-muted-sage rounded-full animate-pulse" />
-                Open to the right role
+                Available for opportunities
               </span>
             </motion.div>
 
@@ -61,8 +61,8 @@ export function Hero() {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="text-base text-soft-gray leading-relaxed mb-10 max-w-lg"
             >
-              Master&apos;s in AI &amp; Data Analytics at Hochschule Neu-Ulm. I like code you can still explain after the
-              data gets weird. Prototypes are fun; production is the real exam.
+              Master's student in AI & Data Analytics at Hochschule Neu-Ulm. 
+              Building intelligent systems that bridge the gap between complex data and real-world decisions.
             </motion.p>
 
             {/* CTAs */}

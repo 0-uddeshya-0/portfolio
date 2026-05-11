@@ -65,11 +65,11 @@ export function Skills() {
           <h3 className="font-heading text-lg text-charcoal mb-4">Soft Skills</h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              { title: "Learning new tools fast", desc: "Comfortable being slightly confused until it clicks" },
-              { title: "Systems thinking", desc: "Checking how parts connect before wiring them together" },
-              { title: "Working across teams", desc: "Happy next to designers, PMs, and people who do not live in terminals" },
-              { title: "Problem-solving", desc: "Looking at the data before declaring something broken" },
-              { title: "Self-directed learning", desc: "Reading docs and source when there is no tutorial" },
+              { title: "Rapid Technology Adoption", desc: "Quick learner with high adaptability" },
+              { title: "System Thinking", desc: "Designing scalable architectures" },
+              { title: "Cross-Functional Collaboration", desc: "Effective stakeholder management" },
+              { title: "Problem-Solving", desc: "Data-driven approach to challenges" },
+              { title: "Self-Directed Learning", desc: "Independent technology implementation" }
             ].map((item) => (
               <div key={item.title} className="p-4 bg-light-beige/50 rounded-xl">
                 <h4 className="font-medium text-charcoal text-sm mb-1">{item.title}</h4>

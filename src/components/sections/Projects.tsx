@@ -24,7 +24,7 @@ export function Projects() {
               Selected Work
             </span>
             <h2 className="font-heading text-3xl lg:text-4xl text-charcoal max-w-xl">
-              Things I built, broke, and fixed
+              Projects that demonstrate real-world impact
             </h2>
           </motion.div>
 

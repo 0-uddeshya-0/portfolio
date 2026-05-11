@@ -94,7 +94,7 @@ export function SiteFooter() {
           <p>
             © {year} {personalInfo.name}
           </p>
-          <p className="text-soft-gray/90">{t('layout.footerAside')}</p>
+          <p className="text-soft-gray/90">A calm interface for a noisy world.</p>
         </div>
       </div>
     </footer>

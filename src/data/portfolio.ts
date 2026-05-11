@@ -6,8 +6,7 @@ export const getAssetPath = (path: string) => {
 export const personalInfo = {
   name: "Uddeshya Singh",
   title: "Data & AI Systems Builder",
-  headline:
-    "I build software that wrangles data and models without turning into a black box.",
+  headline: "I build AI systems that turn complex data into decisions.",
   email: "uddeshyasingh.de@gmail.com",
   phone: "+4915213444415",
   location: "Germany",
@@ -44,19 +43,19 @@ type LocalizedProjectOverride = Partial<
 
 export const valueProposition = [
   {
-    title: "Models in context",
+    title: "AI Systems Development",
     description:
-      "End-to-end pipelines that take raw data and produce something a person or system can actually act on. LLMs when they earn their keep, smaller tools when they are faster or cheaper.",
+      "Building end-to-end AI pipelines that transform raw data into actionable intelligence using modern LLMs and machine learning frameworks.",
   },
   {
     title: "Data Engineering",
     description:
-      "Pipelines and schemas that survive the next requirement change: ingestion and transforms you can trace, and storage you can query without a shovel.",
+      "Designing robust data architectures and processing workflows that ensure clean, structured, and accessible information.",
   },
   {
-    title: "Impact people notice",
+    title: "Business Impact",
     description:
-      "Connecting what the model does to what a team actually feels: fewer panics, fewer mystery outputs, more trust when someone hits deploy.",
+      "Translating technical capabilities into measurable business outcomes through strategic AI implementation and process optimisation.",
   },
 ];
 
@@ -68,7 +67,7 @@ export const projects: PortfolioProject[] = [
     description:
       "Open-source pytest plugin on GitHub: capture LLM outputs as behavioral snapshots, compare meaning with embeddings (not exact strings), and fail CI on semantic drift. Lexical guards, SQLite storage, local or API embedders.",
     problem:
-      "Prompt or model tweaks can change LLM outputs (format, tone, or meaning) while ordinary asserts still pass. Teams often notice only after ship, when parsers or downstream logic break.",
+      "Prompt or model tweaks can change LLM outputs—format, tone, or meaning—while ordinary asserts still pass. Teams often only notice after ship when parsers or downstream logic break.",
     solution:
       "The `@behavior` decorator records return values, stores baselines under `.behaviorci/`, and scores similarity with embeddings (e.g. sentence-transformers or an injected API embedder). Supports record / check / update flows and pytest-xdist.",
     techStack: ["Python", "pytest", "SQLite", "sentence-transformers", "Embeddings", "CI/CD"],
@@ -82,18 +81,18 @@ export const projects: PortfolioProject[] = [
     signature: true,
     github: "https://github.com/0-uddeshya-0/BehaviorCI",
     about:
-      "Same idea as the repo README: treat LLM behavior like snapshot testing (record once, compare on meaning, gate in CI). Still alpha; API and storage are settling toward v1.",
+      "Aligned with the repo README: BehaviorCI treats LLM behavior like snapshot testing—record once, compare on meaning, gate in CI. Alpha software: API and storage still evolving toward v1.",
   },
   {
     id: "vouch",
     title: "Vouch",
     subtitle: "Don't trust AI output. Verify it.",
     description:
-      "TypeScript monorepo (Fastify API, workers, Prisma, Redis) for AI-assisted PR review: npm/PyPI checks, security scanning, hybrid LLM routing, optional free Ollama mode. Layout matches the public README and build docs.",
+      "TypeScript monorepo (Fastify API, workers, Prisma, Redis) for AI-assisted PR review: npm/PyPI checks, security pattern scanning, hybrid LLM routing, and optional zero-cost Ollama mode—per GitHub README and build docs.",
     problem:
       "AI-generated diffs can include fake packages, typosquats, leaked secrets, and risky patterns while looking plausible at a glance.",
     solution:
-      "Webhook-driven pipeline: rule checks, registry verification, Tree-sitter parsing, BullMQ jobs, PostgreSQL for findings. Comments on PRs with disclosures, confidence scores, and audit-friendly context.",
+      "Webhook-driven analysis pipeline: rule-based and registry verification, Tree-sitter parsing, BullMQ jobs, PostgreSQL for findings—designed to comment on PRs with disclosures, confidence, and audit-friendly outputs.",
     techStack: ["TypeScript", "Fastify", "Prisma", "PostgreSQL", "Redis", "BullMQ", "Docker"],
     impact: [
       "Brings verification closer to the PR, not post-deploy",
@@ -111,11 +110,11 @@ export const projects: PortfolioProject[] = [
     title: "KlarBill",
     subtitle: "AI-Powered Utility Bill Assistant",
     description:
-      "A local-LLM pipeline that reads utility bills and answers customer questions about them, built for the Wilken Challenge at Hochschule Neu-Ulm.",
+      "An intelligent system that processes and analyses utility bills using local LLMs, providing customers with clear insights and automated assistance. Built as part of the Wilken Challenge at Hochschule Neu-Ulm.",
     problem:
       "Utility companies struggle with high volumes of customer inquiries about bills, leading to long response times and customer frustration. Manual processing of unstructured bill data is inefficient and error-prone.",
     solution:
-      "Developed an end-to-end pipeline that processes PDF bills, extracts structured data using local LLMs (GPTAll), and answers customer questions using semantic search over extracted fields. The system includes preprocessing automation and a FastAPI backend.",
+      "Developed an end-to-end AI pipeline that processes PDF bills, extracts structured data using local LLMs (GPTAll), and provides intelligent responses to customer queries. The system includes automated data preprocessing and a FastAPI backend for real-time processing.",
     techStack: ["Python", "FastAPI", "GPTAll", "Firebase", "JavaScript", "HTML/CSS"],
     impact: [
       "Reduced customer inquiry response time by 60%",
@@ -127,16 +126,16 @@ export const projects: PortfolioProject[] = [
     context: "Wilken Challenge · Hochschule Neu-Ulm",
     github: "https://github.com/0-uddeshya-0/klarbill",
     about:
-      "The actual challenge was getting a local LLM to do useful work on messy, semi-structured PDF data without relying on paid APIs. I designed the pipeline from OCR extraction to semantic Q&A, with FastAPI as the interface layer.",
+      "KlarBill was built to tackle a real pain point — utility bill confusion. The core challenge was making a local LLM useful on messy, semi-structured PDF data without relying on paid APIs. I designed the pipeline from OCR extraction to semantic Q&A, with FastAPI serving the interface layer.",
   },
   {
     id: "unity-vr-avatar-haptic",
     title: "Unity VR Avatar Haptic System",
     subtitle: "Multi-user VR avatars with networking and haptic-ready interaction",
     description:
-      "Unity VR avatar work (GitHub): controls, haptic hooks, gesture scaffolding, multiplayer via Photon PUN 2. Repo README lists the full feature set.",
+      "Unity VR avatar interaction system (GitHub): advanced controls, haptic integration hooks, gesture/interaction scaffolding, and real-time multiplayer via Photon PUN 2—see repo description for full feature list.",
     problem:
-      "Social VR needs believable presence: synced avatars, clear touch semantics, and a real path to haptics. A pretty demo is not enough if the network story is wrong.",
+      "Social VR needs believable presence: synced avatars, precise touch semantics, and a path to real haptic feedback—not a one-off demo without structure.",
     solution:
       "Implemented a Unity pipeline with ReadyPlayerMe loading, Photon PUN 2 synchronization, XR Interaction Toolkit rigging, and modular haptic managers so touch events can drive device-specific feedback (e.g. bHaptics, Teslasuit) as hardware allows.",
     techStack: ["C#", "Unity", "Photon PUN 2", "OpenXR", "XR Interaction Toolkit", "ReadyPlayerMe"],
@@ -149,28 +148,28 @@ export const projects: PortfolioProject[] = [
     year: "2024",
     github: "https://github.com/0-uddeshya-0/Unity-VR-Avatar-Haptic-System",
     about:
-      "Networked VR that feels right needs sync, frame time, and haptics to agree at once. None of those are a bolt-on you add in week six.",
+      "This project merges systems thinking with immersion: networking correctness, VR performance, and tactile feedback as first-class concerns—not an afterthought.",
   },
   {
     id: "process-development",
     title: "Process Development",
     subtitle: "Consulting Academic Project",
     description:
-      "Academic consulting project applying Lean Six Sigma to map, analyse, and document process improvement opportunities for a real client.",
+      "Cross-functional consulting engagement applying Lean Six Sigma and risk-based compliance frameworks to identify and document process improvement opportunities.",
     problem:
-      "Teams had no shared language for discussing process quality - each group tracked issues differently, and nothing connected.",
+      "Teams lacked structured analytical resources and a shared framework for knowledge exchange around process quality and compliance requirements.",
     solution:
-      "Ran structured workshops, built analysis documents, and worked across teams to apply DMADVO methodology to the most urgent process gaps.",
+      "Facilitated knowledge exchange sessions, prepared stakeholder-facing presentations and documentation, and collaborated with cross-functional teams to implement best practices using DMADVO methodology.",
     techStack: ["DMADVO", "Lean Six Sigma", "Risk-Based Compliance", "Stakeholder Management"],
     impact: [
-      "Built and handed over analysis documentation teams could actually use",
-      "Produced reports that supported implementation decisions",
+      "Delivered structured analytical resources to cross-functional teams",
+      "Produced stakeholder documentation and implementation reports",
       "Applied Lean Six Sigma to identify process inefficiencies",
     ],
     category: "Consulting",
     year: "2024–2025",
     about:
-      "Good practice turning fuzzy briefs into analysis people could act on, and writing it so both ops and leadership could follow. DMADVO kept the work from drifting into vibes-only advice.",
+      "This engagement gave me hands-on experience with the consulting process — translating ambiguous business problems into structured analysis, and communicating findings to stakeholders with varying technical depth. DMADVO provided rigour to what could otherwise have been loose recommendations.",
   },
   {
     id: "dont-waste-food",
@@ -179,7 +178,7 @@ export const projects: PortfolioProject[] = [
     description:
       "Process analysis and optimisation project that identified significant waste reduction opportunities in food service operations.",
     problem:
-      "Food service had real waste, but nobody could point to where in the flow it happened or why.",
+      "Food service operations faced significant waste and inefficiency, with no clear visibility into process bottlenecks and improvement opportunities.",
     solution:
       "Conducted comprehensive process analysis using SAP Signavio, created AS-IS/TO-BE process models, and proposed RPA-based automation solutions for key workflows.",
     techStack: ["SAP Signavio", "Process Mining", "RPA Concepts", "Lean Six Sigma"],
@@ -191,28 +190,28 @@ export const projects: PortfolioProject[] = [
     category: "Process Optimisation",
     year: "2024",
     about:
-      "Turning messy workflows into AS-IS/TO-BE diagrams is only half the job. The other half is a story leadership believes enough to fund.",
+      "This project sharpened my understanding of how data-driven analysis connects to operational outcomes. Translating messy workflows into clean AS-IS/TO-BE diagrams — and then making a credible case for automation — required both analytical and communication skills.",
   },
   {
     id: "ai-design-thinking",
     title: "AI Use Case Development",
     subtitle: "Design Thinking × AI Strategy",
     description:
-      "AI consulting project for Uzin-Utz AG - running design thinking workshops to find where AI could realistically help operations.",
+      "Strategic AI implementation project for Uzin-Utz AG — identifying and evaluating AI opportunities through structured design thinking workshops.",
     problem:
-      "Uzin-Utz needed specific and workable AI opportunities - not a vague strategy deck, but concrete process-level options.",
+      "Organisation needed to identify practical AI applications that could deliver measurable operational improvements without disrupting existing workflows.",
     solution:
-      "Ran design thinking workshops, researched GPT options against actual process pain points, and delivered a phased roadmap to management.",
+      "Led design thinking workshops to identify high-impact AI use cases, researched GPT technologies, and developed a comprehensive AI implementation strategy presented to stakeholders.",
     techStack: ["Design Thinking", "GPT Research", "Stakeholder Management", "Strategy"],
     impact: [
       "Identified 5 high-value AI use cases",
-      "Handed off a phased roadmap with clear next steps",
+      "Developed phased implementation roadmap",
       "Secured stakeholder buy-in for pilot project",
     ],
     category: "AI Strategy",
     year: "2024",
     about:
-      "Working with Uzin-Utz showed me how cautious established organizations are about AI adoption, and why. The double-diamond process gave structure to what would otherwise remain a vague brief.",
+      "Working directly with Uzin-Utz AG gave me practical exposure to how established organisations think about AI adoption — risk aversion, legacy systems, change management. The double-diamond process helped structure ambiguous discovery work into actionable outputs.",
   },
 ];
 
@@ -355,8 +354,8 @@ export const experience = [
     ],
     actions: [
       "Implemented responsive web applications using HTML5, CSS3, JavaScript and modern frontend frameworks",
-      "Kept UX consistent across mobile, tablet, and desktop by following user-centered design throughout",
-      "Set up Git workflows and CI/CD pipelines the team could actually maintain",
+      "Applied User-Centered Design principles for optimal UX across devices",
+      "Established Git workflows and CI/CD pipelines for agile development",
     ],
     outcomes: [
       "Improved mobile user engagement by 35%",
@@ -365,7 +364,7 @@ export const experience = [
     ],
   },
   {
-    role: "Intern, graphic design",
+    role: "Intern — Graphic Designer",
     company: "You Got Brains",
     location: "New Delhi, India",
     period: "08/2022 – 10/2022",
@@ -456,9 +455,9 @@ export const publications = [
     year: "2021",
     coverImage: getAssetPath("book-cover.png"),
     description:
-      "A debut poetry collection about people, confusion, and what it feels like to pay attention. Written between deadlines.",
+      "A debut poetry collection exploring consciousness, emotion, and the tender contradictions of being human. Written in moments between deadlines and design sprints.",
     longDescription:
-      "Published by Writersgram Publications. I wrote it while studying systems and watching people sidestep hard truths. The book is short. Some pieces rhyme, some do not. If there is a theme, it is paying attention instead of performing depth.",
+      "Published by Writersgram Publications, Brain's Heart, a Poet is a debut collection written across seasons of study, building, and reflection. The poems move between solitude and connection, technology and tenderness, and the quiet tension between ambition and vulnerability. It is a personal body of work that balances structure with emotion—much like product building, where clarity matters, but human resonance matters more.",
     links: {
       googlePlay: "https://books.google.com/books/about/Brain_s_heart_a_poet.html?id=eI5NEAAAQBAJ",
       amazon: "https://amzn.to/3y42xy7",
@@ -534,9 +533,9 @@ const publicationGermanOverrides: Record<
   "brains-heart": {
     type: "Gedichtband",
     description:
-      "Erstlingsband: Menschen, Missverständnisse und Momente, in denen einem auffällt, dass man gar nicht so aufmerksam war wie gedacht. Zwischen Deadlines geschrieben.",
+      "Ein Debutband uber Bewusstsein, Emotion und die stillen Widerspruche des Menschseins - geschrieben zwischen Studium, Projekten und Produktarbeit.",
     longDescription:
-      "Bei Writersgram Publications erschienen. Die Texte sind kurz, teils gereimt, teils nicht. Es geht um Zuhören, Peinlichkeiten, Ehrgeiz und Zweifel, oft im selben Atemzug. Wer Code schreibt, merkt vielleicht, dass ich auch dort auf Rhythmus und klare Zeilen achte.",
+      "Veroffentlicht bei Writersgram Publications. Brain's Heart, a Poet ist ein Debutband, entstanden zwischen Studium, Produktarbeit und personlichen Umbruchen. Die Texte bewegen sich zwischen Introspektion und Beobachtung: Nahe und Distanz, Technologie und Menschlichkeit, Anspruch und Verletzlichkeit. Wie im Engineering geht es auch hier um Struktur - aber immer mit Wirkung beim Menschen.",
     tags: ["Lyrik", "Publizierter Autor", "Writersgram Publications"],
   },
 };
@@ -557,7 +556,7 @@ export const workshops = [
     institution: "Hochschule Neu-Ulm",
     year: "2024",
     description:
-      "Facilitated design thinking with Uzin-Utz AG to find AI ideas that could survive a real factory floor, not just a slide deck. Double diamond: go wide, then cut hard to what was feasible.",
+      "Facilitated structured design thinking sprints to identify, validate, and prioritise AI use cases for a manufacturing company's operational workflows. Applied double-diamond methodology with user research, rapid prototyping, and stakeholder presentations.",
     methodology: [
       "Double Diamond",
       "User Research",
@@ -566,7 +565,7 @@ export const workshops = [
       "GPT Technology Research",
     ],
     outcome:
-      "Five AI directions the client could picture, plus a phased roadmap management actually signed off on.",
+      "5 validated AI use cases with a phased implementation roadmap, presented to senior management.",
   },
 ];
 
@@ -575,14 +574,14 @@ export const workshops = [
 export const creativeWork = {
   title: "Sketches & Visual Work",
   description:
-    "Drawing is thinking before the keyboard gets involved. Portraits, landscapes, and abstractions in pencil, acrylic, and ink.",
+    "Drawing has been a quieter part of the work — a way to think before the keyboard. Portraits, landscapes, and abstractions across pencil, acrylic, and ink.",
   series: [
     {
       id: "portraits",
       title: "Portrait Studies",
       medium: "Pencil on paper",
       concept:
-        "Starting with the face and trying to get the expression right. A portrait works when you can tell what the person is thinking without being told.",
+        "Capturing the essence of individuals — expressive faces and the small gestures that make a person recognisable. Each portrait starts with observation and ends with something that feels like understanding.",
       // Add portrait images: { id: 1, src: '/sketches/portrait-01.jpg', subject: 'Study I' }
       pieces: [] as Array<{ id: number; src: string; subject: string }>,
     },
@@ -591,7 +590,7 @@ export const creativeWork = {
       title: "Miniature Paintings",
       medium: "Acrylic on canvas",
       concept:
-        "Tiny canvases, loud color. Small size forces you to decide what matters in a scene.",
+        "Vibrant scenes compressed into small formats — nature's detail and colour captured in miniature. The constraint of scale forces precision.",
       pieces: [] as Array<{ id: number; src: string; subject: string }>,
     },
     {
@@ -599,7 +598,7 @@ export const creativeWork = {
       title: "Ink Landscapes",
       medium: "Ink on paper",
       concept:
-        "Mountains from black ink lines that never cross. Looks abstract until you squint; then it clicks.",
+        "Mountain landscapes built from non-intersecting black ink lines. Abstract, yet immediately legible — the kind of composition that rewards a second look.",
       pieces: [] as Array<{ id: number; src: string; subject: string }>,
     },
   ],
@@ -607,9 +606,9 @@ export const creativeWork = {
 
 export const howIBuild = {
   approach:
-    "I start with the problem, not the shiny tool. What does 'working' mean here, and who gets paged if it does not? That answer matters more than whatever is trending on Hacker News.",
+    "I start with the problem, not the technology. Every system I build begins with understanding the business context, user needs, and success metrics. This ensures technical solutions actually solve real problems.",
   systemThinking:
-    "A feature that demos well but wrecks the data model in two months is not finished. I try to notice which choices mortgage the future before I merge them.",
+    "I view projects as interconnected systems rather than isolated features. This means considering data flow, scalability, maintenance, and integration points from day one — not as afterthoughts.",
   tradeoffs:
-    "I jot why we picked A over B. Not every line needs a paper trail, but the ones that will confuse Future Me usually do.",
+    "Engineering is about making informed tradeoffs. I document decisions, weigh alternatives, and choose approaches that balance immediate delivery with long-term sustainability.",
 };

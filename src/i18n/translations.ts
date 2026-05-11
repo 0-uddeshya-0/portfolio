@@ -1,6 +1,6 @@
 export type Lang = 'en' | 'de';
 
-/** Nested string map. Use dot paths with t('nav.home'). */
+/** Nested string map — use dot paths with t('nav.home'). */
 export const translations = {
   en: {
     nav: {
@@ -14,16 +14,13 @@ export const translations = {
       language: 'Language',
       switchToEnglish: 'English',
       switchToGerman: 'Deutsch',
-      footerTagline: 'Based in Ulm, Germany. Remote-friendly.',
-      footerRights: 'All rights reserved.',
-      footerLocation: 'Built with care in Ulm',
-      footerAside: 'If you read this far, you deserve good coffee.',
+      footerTagline: 'Built with intention. Designed with care.',
+      footerLocation: 'Built for people, anywhere.',
     },
     home: {
-      badge: 'Open to the right role',
-      headline:
-        'I build software that wrangles data and models without turning into a black box.',
-      bio: "Master's in AI & Data Analytics at Hochschule Neu-Ulm. I like code you can still explain after the data gets weird. Prototypes are fun; production is the real exam.",
+      badge: 'Open to opportunities',
+      headline: 'I build AI systems that turn complex data into decisions.',
+      bio: "Master's student in AI & Data Analytics at Hochschule Neu-Ulm. I like systems that stay understandable when the data gets noisy — from prototype to something you can run in production.",
       viewProjects: 'View projects',
       getInTouch: 'Get in touch',
       card: {
@@ -35,19 +32,19 @@ export const translations = {
       },
       value: {
         kicker: 'What I do',
-        title: 'Between the messy idea and the thing that ships',
+        title: 'Turning complexity into calm, usable systems',
         cards: {
           ai: {
-            title: 'Models in context',
-            body: 'Pipelines from messy inputs to something a human can act on. Big models when they help, smaller tools when they are faster or cheaper.',
+            title: 'AI systems',
+            body: 'End-to-end pipelines that move raw data toward decisions — LLMs and classical ML where each actually earns its place.',
           },
           data: {
-            title: 'Data you can trace',
-            body: "Pipelines and storage you can follow without archaeology. Ideally nothing dies as a one-off script on someone's laptop.",
+            title: 'Data engineering',
+            body: 'Architectures and workflows that keep information clean, traceable, and easy to build on — not a one-off script graveyard.',
           },
           impact: {
-            title: 'Impact you can feel',
-            body: 'I try to tie numbers to what teams notice day to day: less firefighting, fewer "why did it say that?" moments, more confidence hitting deploy.',
+            title: 'Business impact',
+            body: 'Connecting models and metrics to what teams care about: time saved, risk reduced, and decisions people trust.',
           },
         },
       },
@@ -57,56 +54,56 @@ export const translations = {
         viewAll: 'View all',
         behaviorci: {
           subtitle: 'Pytest plugin: snapshot LLM outputs, catch semantic drift in CI',
-          category: 'Signature, developer tools',
+          category: 'Signature · Developer tools',
         },
         vouch: {
           subtitle: 'PR analysis for fake deps, secrets, and risky AI-generated diffs',
-          category: 'Full-stack AI, GitHub App',
+          category: 'Full-stack AI · GitHub App',
         },
       },
       publication: {
-        kicker: 'Off the clock',
-        title: 'Also: I publish poems',
-        body: 'Same person who debugs embeddings writes sonnets sometimes. Different spell checker, same obsession with rhythm.',
+        kicker: 'Beyond code',
+        title: 'Published author',
+        body: 'Writing and building have more in common than it looks — both need structure, and both only work when they land with a reader.',
         cta: 'About the book',
       },
       cta: {
-        title: 'If your team needs help building this stuff',
-        body: 'Working student roles, internships, or hands-on phases in AI, data engineering, or software. Tell me what you are stuck on.',
+        title: "Let's build something that holds up in the real world",
+        body: 'Open to working student roles, internships, and practical training in AI, data engineering, and software development.',
         button: 'Get in touch',
       },
     },
     contact: {
       kicker: 'Contact',
-      title: 'Say hi',
+      title: "Let's work together",
       intro:
-        'Working student roles, internships, or hands-on phases in AI, data engineering, or software. Worst case, we both learn something.',
+        'Open to working student roles, internships, and practical training in AI, data engineering, software development, and adjacent fields.',
       email: 'Email',
       github: 'GitHub',
       locationLabel: 'Location',
       languagesLabel: 'Languages',
       englishLine: 'English (professional)',
-      germanLine: 'German (A2, actively improving)',
+      germanLine: 'German (A2 — actively improving)',
       quickInfo: 'Quick info',
       availability: 'Availability',
       openOpportunities: 'Open to opportunities',
-      availabilityHint: 'Working student, internship, Werkstudent',
+      availabilityHint: 'Working student · Internship · Werkstudent',
       areasTitle: 'Areas of interest',
       downloadLabel: 'Download',
       resumeEnglish: 'Resume (English PDF)',
       resumeGerman: 'Resume (German PDF)',
       cvHint: 'Place the German CV at `public/Resume-DE.pdf` when ready.',
       downloadCv: 'Download CV',
-      responseTime: 'I usually reply within a couple of days (Europe/Berlin time).',
-      rightsSuffix: 'Thanks for scrolling.',
-      tagline: 'No stock photos were harmed.',
-      footer: 'Thanks for scrolling',
+      responseTime: 'I usually reply within 24–48 hours.',
+      rightsSuffix: 'Built for people, anywhere.',
+      tagline: 'Built with intention. Designed with care.',
+      footer: 'Built for people, anywhere · ©',
     },
     projects: {
       kicker: 'Portfolio',
       title: 'Projects',
       intro:
-        'Shipped tools, experiments, and a few workshops where I helped teams argue less vaguely about AI. Each row has a story; click if you are curious.',
+        'A mix of shipped tools, experiments, and facilitation work — the through-line is making AI and data easier to trust and operate.',
       stackOverview: 'Stack overview',
       signature: 'Signature',
       facilitation: 'Facilitation',
@@ -128,11 +125,11 @@ export const translations = {
       kicker: 'About',
       title: 'The story so far',
       intro:
-        'I work on data and AI that has to survive contact with the real world: setups you can explain, results you can measure, limits you can name.',
+        'I build data and AI systems with an eye on the messy real world — architecture you can explain, and outcomes you can measure.',
       studioCtaKicker: 'Beyond work',
       studioCtaTitle: 'Writing, sketches & interests',
       studioCtaBody:
-        'Poems, sketches, and the hobbies that keep my brain from turning entirely into logs.',
+        'A small window into how I think when I’m not shipping code — published writing, visual work, and the habits that keep me curious.',
       studioCtaLink: 'Open Studio',
       sections: {
         approach: 'Approach',
@@ -164,21 +161,21 @@ export const translations = {
       approach: {
         problemFirst: {
           title: 'Problem-first',
-          body: 'I start from the problem, not the toolkit. Context, users, and a clear idea of what "good" means keep the build honest.',
+          body: 'I start from the problem, not the toolkit. Understanding context, users, and what “good” means keeps the build honest.',
         },
         systems: {
           title: 'Systems thinking',
-          body: 'I treat work as connected flows (data, ownership, scale, maintenance) so surprises show up early, not on a Friday deploy.',
+          body: 'I treat work as connected flows — data, ownership, scale, and maintenance — so surprises show up early, not in production.',
         },
         tradeoffs: {
           title: 'Clear tradeoffs',
-          body: 'Engineering is picking between good options. I write the important calls down so future me does not invent a fake memory.',
+          body: 'Engineering is choosing between good options. I write decisions down and bias toward solutions that age well.',
         },
       },
       creative: {
         title: 'Sketches & visual work',
         description:
-          'Drawing is slow thinking for me: portraits, landscapes, and ink lines that build patience before anything ships.',
+          'Drawing is a slower way to think — portraits, landscapes, and ink lines that train patience before anything ships.',
       },
       skillsCategories: {
         aiMl: 'AI & ML',
@@ -191,23 +188,23 @@ export const translations = {
       kicker: 'Studio',
       title: 'Beyond the build',
       intro:
-        'The quieter shelf: published writing, visual studies, and small obsessions that keep curiosity from rusting.',
+        'A quieter side of my work: published writing, visual studies, and the small interests that keep my curiosity sharp.',
       bookKicker: 'Written work',
       bookOpen: 'Open feature',
       gallery: 'Gallery',
       sketchesKicker: 'Visual work',
       sketchesTitle: 'Sketches & paintings',
       sketchesBody:
-        'Portraits when I want faces to behave, landscapes when I want distance, ink when I want rules. All of it is practice for noticing details.',
+        'Portrait studies, landscapes, and acrylic/ink experiments that sharpen observation and patience.',
       availableOn: 'Available on',
       poemPreview: 'Poem preview',
       interestsKicker: 'Interests',
       interestsTitle: 'What I recharge with',
       interests: {
-        travel: 'Travel and new neighborhoods',
-        reading: 'Reading (non-fiction, poetry, bad sci-fi)',
-        cooking: 'Cooking (experimental, edible)',
-        learning: 'Learning things I will probably over-explain at dinner',
+        travel: 'Travel & new places',
+        reading: 'Reading (non-fiction + poetry)',
+        cooking: 'Cooking',
+        learning: 'Learning new things',
       },
     },
   },
@@ -223,16 +220,13 @@ export const translations = {
       language: 'Sprache',
       switchToEnglish: 'English',
       switchToGerman: 'Deutsch',
-      footerTagline: 'Standort Ulm, Deutschland. Remote ist kein Problem.',
-      footerRights: 'Alle Rechte vorbehalten.',
-      footerLocation: 'Mit Sorgfalt aus Ulm',
-      footerAside: 'Wenn du bis hier scrollst, hast du dir einen Kaffee verdient.',
+      footerTagline: 'Mit Absicht gebaut. Mit Sorgfalt gestaltet.',
+      footerLocation: 'Für Menschen gebaut – überall.',
     },
     home: {
       badge: 'Offen für passende Rollen',
-      headline:
-        'Ich baue Software, die Daten und Modelle bändigt, ohne zur Blackbox zu werden.',
-      bio: 'Master AI & Data Analytics an der HNU. Mir wichtig ist Code, den man auch noch erklären kann, wenn die Daten plötzlich komisch werden. Prototypen sind schön, Produktion ist die eigentliche Prüfung.',
+      headline: 'Ich baue KI-Systeme, die aus komplexen Daten Entscheidungen werden lassen.',
+      bio: 'Masterstudent AI & Data Analytics an der Hochschule Neu-Ulm. Mir wichtig sind Systeme, die auch dann noch verständlich bleiben, wenn die Daten unruhig werden — vom Prototyp bis zu etwas, das man wirklich betreiben kann.',
       viewProjects: 'Zu den Projekten',
       getInTouch: 'Kontakt aufnehmen',
       card: {
@@ -244,19 +238,19 @@ export const translations = {
       },
       value: {
         kicker: 'Schwerpunkte',
-        title: 'Zwischen der Idee und dem, was wirklich live geht',
+        title: 'Komplexität in ruhige, nutzbare Systeme übersetzen',
         cards: {
           ai: {
-            title: 'Modelle mit Kontext',
-            body: 'Pipelines von unordentlichen Eingaben zu etwas, worauf Menschen reagieren können. Große Modelle, wenn sie helfen, kleinere Werkzeuge, wenn sie schneller oder günstiger sind.',
+            title: 'KI-Systeme',
+            body: 'End-to-End-Pipelines von Rohdaten hin zu Entscheidungen — LLMs und klassisches ML, jeweils dort, wo es wirklich Sinn ergibt.',
           },
           data: {
-            title: 'Daten, denen man folgen kann',
-            body: 'Pipelines und Speicher, die man nachvollziehen kann, ohne Archäologie zu betreiben. Möglichst kein Einmal-Skript, das auf einem Laptop verschwindet.',
+            title: 'Data Engineering',
+            body: 'Architekturen und Workflows, die Daten nachvollziehbar und erweiterbar halten — statt einer Sammlung Einmal-Skripte.',
           },
           impact: {
-            title: 'Wirkung, die man merkt',
-            body: 'Ich versuche Kennzahlen mit dem zu verbinden, was Teams im Alltag spüren: weniger Feuerwehr, weniger "warum hat es das gesagt?", mehr Vertrauen vor dem Deploy.',
+            title: 'Wirkung im Geschäft',
+            body: 'Modelle und Kennzahlen mit dem verbinden, was Teams spüren: gewonnene Zeit, weniger Risiko, Entscheidungen, denen man vertraut.',
           },
         },
       },
@@ -266,56 +260,56 @@ export const translations = {
         viewAll: 'Alle ansehen',
         behaviorci: {
           subtitle: 'Pytest-Plugin: LLM-Outputs snapshotten, semantische Drift in der CI',
-          category: 'Signature, Developer Tools',
+          category: 'Signature · Developer Tools',
         },
         vouch: {
           subtitle: 'PR-Analyse: erfundene Dependencies, Secrets, riskante KI-Diffs',
-          category: 'Full-Stack-KI, GitHub App',
+          category: 'Full-Stack-KI · GitHub App',
         },
       },
       publication: {
         kicker: 'Neben dem Code',
-        title: 'Übrigens: ich schreibe Lyrik',
-        body: 'Wer Embeddings debuggt, schreibt manchmal auch Sonette. Anderer Rechtschreibmodus, gleiche Lust auf Rhythmus.',
+        title: 'Publizierter Autor',
+        body: 'Schreiben und Bauen haben mehr gemeinsam, als man denkt — beides braucht Struktur, und beides zählt erst, wenn es beim Leser ankommt.',
         cta: 'Zum Buch',
       },
       cta: {
-        title: 'Wenn ihr beim Bauen Unterstützung braucht',
-        body: 'Offen für Werkstudententätigkeit, Praktika oder Praxisphasen in KI, Data Engineering oder Software. Schreib mir, wo es hakt.',
+        title: 'Lass uns etwas bauen, das im Alltag besteht',
+        body: 'Offen für Werkstudententätigkeiten, Praktika und Praxisphasen in KI, Data Engineering und Softwareentwicklung.',
         button: 'Kontakt aufnehmen',
       },
     },
     contact: {
       kicker: 'Kontakt',
-      title: 'Schreib mir',
+      title: 'Gemeinsam vorankommen',
       intro:
-        'Offen für Werkstudententätigkeit, Praktika oder Praxisphasen in KI, Data Engineering und Software. Im schlimmsten Fall lernen wir beide etwas.',
+        'Offen für Werkstudententätigkeiten, Praktika und Praxisphasen in KI, Data Engineering, Softwareentwicklung und verwandten Bereichen.',
       email: 'E-Mail',
       github: 'GitHub',
       locationLabel: 'Standort',
       languagesLabel: 'Sprachen',
       englishLine: 'Englisch (beruflich)',
-      germanLine: 'Deutsch (A2, ich übe aktiv weiter)',
+      germanLine: 'Deutsch (A2 — ich übe aktiv weiter)',
       quickInfo: 'Kurzüberblick',
       availability: 'Verfügbarkeit',
       openOpportunities: 'Offen für passende Rollen',
-      availabilityHint: 'Werkstudent, Praktikum, Praxissemester',
+      availabilityHint: 'Werkstudent · Praktikum · Praxissemester',
       areasTitle: 'Interessenschwerpunkte',
       downloadLabel: 'Download',
       resumeEnglish: 'Lebenslauf (Englisch, PDF)',
       resumeGerman: 'Lebenslauf (Deutsch, PDF)',
       cvHint: 'Lege die deutsche Version später unter `public/Resume-DE.pdf` ab.',
       downloadCv: 'Lebenslauf laden',
-      responseTime: 'In der Regel antworte ich innerhalb von ein paar Tagen (Zeitzone Europa/Berlin).',
-      rightsSuffix: 'Danke fürs Scrollen.',
-      tagline: 'Keine Stockfotos zu Schaden gekommen.',
-      footer: 'Danke fürs Scrollen',
+      responseTime: 'In der Regel antworte ich innerhalb von 24–48 Stunden.',
+      rightsSuffix: 'Für Menschen gebaut – überall.',
+      tagline: 'Mit Absicht gebaut. Mit Sorgfalt gestaltet.',
+      footer: 'Für Menschen gebaut – überall · ©',
     },
     projects: {
       kicker: 'Portfolio',
       title: 'Projekte',
       intro:
-        'Gebaute Tools, Experimente und ein paar Workshops, in denen Teams weniger vage über KI diskutiert haben. Jede Zeile hat eine Geschichte, Klick lohnt sich.',
+        'Auswahl aus Tools, Experimenten und Moderation — roter Faden: KI und Daten so aufzusetzen, dass man ihnen vertrauen und sie betreiben kann.',
       stackOverview: 'Stack-Überblick',
       signature: 'Signature',
       facilitation: 'Moderation & Workshops',
@@ -337,11 +331,11 @@ export const translations = {
       kicker: 'Über mich',
       title: 'Bisherige Stationen',
       intro:
-        'Ich arbeite an Daten und KI, die Kontakt mit der Realität überleben müssen: Setups, die man erklären kann, Ergebnisse, die man messen kann, Grenzen, die man benennen kann.',
+        'Ich entwickle Daten- und KI-Systeme mit Blick auf die unaufgeräumte Realität — Architektur, die man erklären kann, und Resultate, die man messen kann.',
       studioCtaKicker: 'Neben dem Beruf',
       studioCtaTitle: 'Schreiben, Skizzen & Interessen',
       studioCtaBody:
-        'Gedichte, Skizzen und Hobbys, damit aus meinem Kopf nicht nur noch Logs werden.',
+        'Ein kleiner Einblick, wie ich denke, wenn ich nicht gerade Code shippe — publiziertes Schreiben, visuelle Arbeit und Gewohnheiten, die mich neugierig halten.',
       studioCtaLink: 'Studio öffnen',
       sections: {
         approach: 'Arbeitsweise',
@@ -373,21 +367,21 @@ export const translations = {
       approach: {
         problemFirst: {
           title: 'Problem zuerst',
-          body: 'Ich starte beim Problem, nicht beim Tool. Kontext, Nutzer und ein klares Bild von "gut" halten den Build ehrlich.',
+          body: 'Ich starte beim Problem, nicht beim Tool. Kontext, Nutzer und ein klares Bild von „gut“ halten den Build ehrlich.',
         },
         systems: {
           title: 'Systemisches Denken',
-          body: 'Ich sehe Arbeit als zusammenhängende Flüsse (Daten, Verantwortung, Skalierung, Betrieb), damit Überraschungen früh kommen, nicht beim Freitag-Deploy.',
+          body: 'Ich sehe Arbeit als zusammenhängende Flüsse — Daten, Verantwortung, Skalierung, Betrieb — damit Überraschungen früh kommen, nicht im Live-Betrieb.',
         },
         tradeoffs: {
           title: 'Bewusste Kompromisse',
-          body: 'Engineering heißt, zwischen guten Optionen zu wählen. Wichtige Entscheidungen halte ich fest, damit ich mir später kein falsches Erinnerungs-Märchen erzähle.',
+          body: 'Engineering heißt, zwischen guten Optionen wählen. Entscheidungen festhalten und Lösungen bevorzugen, die auch in einem Jahr noch tragfähig sind.',
         },
       },
       creative: {
         title: 'Skizzen & visuelle Arbeit',
         description:
-          'Zeichnen ist für mich langsames Denken: Porträts, Landschaften und Tuschelinien, die Geduld trainieren, bevor etwas live geht.',
+          'Zeichnen ist für mich langsames Denken — Porträts, Landschaften und Tuschelinien, die Geduld trainieren, bevor etwas live geht.',
       },
       skillsCategories: {
         aiMl: 'KI & ML',
@@ -400,23 +394,23 @@ export const translations = {
       kicker: 'Studio',
       title: 'Neben dem Build',
       intro:
-        'Das ruhigere Regal: Texte, Bildstudien und kleine Obsessionen, damit Neugier nicht einrostet.',
+        'Die ruhigere Seite: publiziertes Schreiben, visuelle Studien und die kleinen Interessen, die meine Neugier wach halten.',
       bookKicker: 'Texte & Buch',
       bookOpen: 'Feature öffnen',
       gallery: 'Galerie',
       sketchesKicker: 'Visuelle Arbeiten',
       sketchesTitle: 'Skizzen & Malerei',
       sketchesBody:
-        'Porträts, wenn Gesichter zählen, Landschaften für Distanz, Tusche für klare Regeln. Alles Training fürs genauere Hinsehen.',
+        'Porträtstudien, Landschaften und Acryl-/Tusche-Experimente, die Beobachtung und Geduld schärfen.',
       availableOn: 'Erhältlich bei',
       poemPreview: 'Gedichtvorschau',
       interestsKicker: 'Interessen',
       interestsTitle: 'Womit ich auftanke',
       interests: {
-        travel: 'Reisen und neue Viertel',
-        reading: 'Lesen (Sachbuch, Lyrik, gelegentlich schlechte Sci-Fi)',
-        cooking: 'Kochen (experimentell, meist essbar)',
-        learning: 'Neues lernen, das ich beim Abendessen wahrscheinlich zu ausführlich erkläre',
+        travel: 'Reisen & neue Orte',
+        reading: 'Lesen (Sachbücher + Lyrik)',
+        cooking: 'Kochen',
+        learning: 'Neues lernen',
       },
     },
   },
