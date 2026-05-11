@@ -21,7 +21,7 @@ export function ValueProposition() {
             What I Do
           </span>
           <h2 className="font-heading text-3xl lg:text-4xl text-charcoal max-w-2xl">
-            From messy inputs to something you can actually ship
+            Transforming complexity into clarity through intelligent systems
           </h2>
         </motion.div>
 

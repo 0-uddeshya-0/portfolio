@@ -24,7 +24,7 @@ export function Contact() {
                 Let's build something together
               </h2>
               <p className="text-charcoal/70 leading-relaxed mb-8 max-w-md">
-                If you are hiring in AI, data, or general software and want a curious human, not a buzzword dispenser, email me.
+                I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
               </p>
             </motion.div>
 
@@ -120,7 +120,7 @@ export function Contact() {
                 transition={{ delay: 0.5 }}
                 className="mt-6 text-sm text-soft-gray font-mono"
               >
-                Say hello.
+                Looking forward to connecting!
               </motion.p>
             </div>
           </motion.div>
@@ -139,7 +139,7 @@ export function Contact() {
               © {new Date().getFullYear()} {personalInfo.name}. All rights reserved.
             </p>
             <p className="text-sm text-soft-gray">
-              A calm interface for a noisy world.
+              Built with intention. Designed with care.
             </p>
           </div>
         </motion.div>

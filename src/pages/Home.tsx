@@ -206,12 +206,12 @@ export function Home() {
                   className="flex flex-wrap gap-2 pt-6"
                 >
                   {[
-                    'Shippable prototypes',
-                    'Tests that catch weird LLM drift',
-                    'Pipelines you can trace',
+                    'AI Systems Design',
+                    'LLM Evaluation',
+                    'Data Engineering',
                     'FastAPI',
-                    'Text and NLP',
-                    'Process maps that survive meetings',
+                    'NLP',
+                    'Process Optimization',
                   ].map((tag) => (
                     <span
                       key={tag}
