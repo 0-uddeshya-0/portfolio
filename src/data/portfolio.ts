@@ -6,7 +6,8 @@ export const getAssetPath = (path: string) => {
 export const personalInfo = {
   name: "Uddeshya Singh",
   title: "Data & AI Systems Builder",
-  headline: "I build AI systems that turn complex data into decisions.",
+  headline:
+    "I build software that wrangles data and models without turning into a black box.",
   email: "uddeshyasingh.de@gmail.com",
   phone: "+4915213444415",
   location: "Germany",
@@ -43,19 +44,19 @@ type LocalizedProjectOverride = Partial<
 
 export const valueProposition = [
   {
-    title: "AI Systems Development",
+    title: "Models in context",
     description:
-      "End-to-end pipelines that take raw data and produce something a person or system can actually act on - LLMs where they earn their place, classical ML where they don't.",
+      "End-to-end pipelines that take raw data and produce something a person or system can actually act on. LLMs when they earn their keep, smaller tools when they are faster or cheaper.",
   },
   {
     title: "Data Engineering",
     description:
-      "Designing robust data architectures and processing workflows that ensure clean, structured, and accessible information.",
+      "Pipelines and schemas that survive the next requirement change: ingestion and transforms you can trace, and storage you can query without a shovel.",
   },
   {
-    title: "Business Impact",
+    title: "Impact people notice",
     description:
-      "Connecting what the model does to what a team cares about - time saved, decisions trusted, risks spotted earlier.",
+      "Connecting what the model does to what a team actually feels: fewer panics, fewer mystery outputs, more trust when someone hits deploy.",
   },
 ];
 
@@ -67,7 +68,7 @@ export const projects: PortfolioProject[] = [
     description:
       "Open-source pytest plugin on GitHub: capture LLM outputs as behavioral snapshots, compare meaning with embeddings (not exact strings), and fail CI on semantic drift. Lexical guards, SQLite storage, local or API embedders.",
     problem:
-      "Prompt or model tweaks can change LLM outputs—format, tone, or meaning—while ordinary asserts still pass. Teams often only notice after ship when parsers or downstream logic break.",
+      "Prompt or model tweaks can change LLM outputs (format, tone, or meaning) while ordinary asserts still pass. Teams often notice only after ship, when parsers or downstream logic break.",
     solution:
       "The `@behavior` decorator records return values, stores baselines under `.behaviorci/`, and scores similarity with embeddings (e.g. sentence-transformers or an injected API embedder). Supports record / check / update flows and pytest-xdist.",
     techStack: ["Python", "pytest", "SQLite", "sentence-transformers", "Embeddings", "CI/CD"],
@@ -81,18 +82,18 @@ export const projects: PortfolioProject[] = [
     signature: true,
     github: "https://github.com/0-uddeshya-0/BehaviorCI",
     about:
-      "Aligned with the repo README: BehaviorCI treats LLM behavior like snapshot testing—record once, compare on meaning, gate in CI. Alpha software: API and storage still evolving toward v1.",
+      "Same idea as the repo README: treat LLM behavior like snapshot testing (record once, compare on meaning, gate in CI). Still alpha; API and storage are settling toward v1.",
   },
   {
     id: "vouch",
     title: "Vouch",
     subtitle: "Don't trust AI output. Verify it.",
     description:
-      "TypeScript monorepo (Fastify API, workers, Prisma, Redis) for AI-assisted PR review: npm/PyPI checks, security pattern scanning, hybrid LLM routing, and optional zero-cost Ollama mode—per GitHub README and build docs.",
+      "TypeScript monorepo (Fastify API, workers, Prisma, Redis) for AI-assisted PR review: npm/PyPI checks, security scanning, hybrid LLM routing, optional free Ollama mode. Layout matches the public README and build docs.",
     problem:
       "AI-generated diffs can include fake packages, typosquats, leaked secrets, and risky patterns while looking plausible at a glance.",
     solution:
-      "Webhook-driven analysis pipeline: rule-based and registry verification, Tree-sitter parsing, BullMQ jobs, PostgreSQL for findings—designed to comment on PRs with disclosures, confidence, and audit-friendly outputs.",
+      "Webhook-driven pipeline: rule checks, registry verification, Tree-sitter parsing, BullMQ jobs, PostgreSQL for findings. Comments on PRs with disclosures, confidence scores, and audit-friendly context.",
     techStack: ["TypeScript", "Fastify", "Prisma", "PostgreSQL", "Redis", "BullMQ", "Docker"],
     impact: [
       "Brings verification closer to the PR, not post-deploy",
@@ -133,9 +134,9 @@ export const projects: PortfolioProject[] = [
     title: "Unity VR Avatar Haptic System",
     subtitle: "Multi-user VR avatars with networking and haptic-ready interaction",
     description:
-      "Unity VR avatar interaction system (GitHub): advanced controls, haptic integration hooks, gesture/interaction scaffolding, and real-time multiplayer via Photon PUN 2—see repo description for full feature list.",
+      "Unity VR avatar work (GitHub): controls, haptic hooks, gesture scaffolding, multiplayer via Photon PUN 2. Repo README lists the full feature set.",
     problem:
-      "Social VR needs believable presence: synced avatars, precise touch semantics, and a path to real haptic feedback—not a one-off demo without structure.",
+      "Social VR needs believable presence: synced avatars, clear touch semantics, and a real path to haptics. A pretty demo is not enough if the network story is wrong.",
     solution:
       "Implemented a Unity pipeline with ReadyPlayerMe loading, Photon PUN 2 synchronization, XR Interaction Toolkit rigging, and modular haptic managers so touch events can drive device-specific feedback (e.g. bHaptics, Teslasuit) as hardware allows.",
     techStack: ["C#", "Unity", "Photon PUN 2", "OpenXR", "XR Interaction Toolkit", "ReadyPlayerMe"],
@@ -148,7 +149,7 @@ export const projects: PortfolioProject[] = [
     year: "2024",
     github: "https://github.com/0-uddeshya-0/Unity-VR-Avatar-Haptic-System",
     about:
-      "This project merges systems thinking with immersion: networking correctness, VR performance, and tactile feedback as first-class concerns—not an afterthought.",
+      "Networked VR that feels right needs sync, frame time, and haptics to agree at once. None of those are a bolt-on you add in week six.",
   },
   {
     id: "process-development",
@@ -169,7 +170,7 @@ export const projects: PortfolioProject[] = [
     category: "Consulting",
     year: "2024–2025",
     about:
-      "This engagement gave me hands-on experience with the consulting process — translating ambiguous business problems into structured analysis, and communicating findings to stakeholders with varying technical depth. DMADVO provided rigour to what could otherwise have been loose recommendations.",
+      "Good practice turning fuzzy briefs into analysis people could act on, and writing it so both ops and leadership could follow. DMADVO kept the work from drifting into vibes-only advice.",
   },
   {
     id: "dont-waste-food",
@@ -178,7 +179,7 @@ export const projects: PortfolioProject[] = [
     description:
       "Process analysis and optimisation project that identified significant waste reduction opportunities in food service operations.",
     problem:
-      "Food service operations faced significant waste and inefficiency, with no clear visibility into process bottlenecks and improvement opportunities.",
+      "Food service had real waste, but nobody could point to where in the flow it happened or why.",
     solution:
       "Conducted comprehensive process analysis using SAP Signavio, created AS-IS/TO-BE process models, and proposed RPA-based automation solutions for key workflows.",
     techStack: ["SAP Signavio", "Process Mining", "RPA Concepts", "Lean Six Sigma"],
@@ -190,7 +191,7 @@ export const projects: PortfolioProject[] = [
     category: "Process Optimisation",
     year: "2024",
     about:
-      "This project sharpened my understanding of how data-driven analysis connects to operational outcomes. Translating messy workflows into clean AS-IS/TO-BE diagrams — and then making a credible case for automation — required both analytical and communication skills.",
+      "Turning messy workflows into AS-IS/TO-BE diagrams is only half the job. The other half is a story leadership believes enough to fund.",
   },
   {
     id: "ai-design-thinking",
@@ -364,7 +365,7 @@ export const experience = [
     ],
   },
   {
-    role: "Intern — Graphic Designer",
+    role: "Intern, graphic design",
     company: "You Got Brains",
     location: "New Delhi, India",
     period: "08/2022 – 10/2022",
@@ -457,7 +458,7 @@ export const publications = [
     description:
       "A debut poetry collection about people, confusion, and what it feels like to pay attention. Written between deadlines.",
     longDescription:
-      "Published by Writersgram Publications. These poems came from years of studying systems while also watching people - what they avoid saying, how they misread each other, and why ambition and doubt often arrive together. The book is short and unforced. Some poems rhyme, some do not. The through-line is attention.",
+      "Published by Writersgram Publications. I wrote it while studying systems and watching people sidestep hard truths. The book is short. Some pieces rhyme, some do not. If there is a theme, it is paying attention instead of performing depth.",
     links: {
       googlePlay: "https://books.google.com/books/about/Brain_s_heart_a_poet.html?id=eI5NEAAAQBAJ",
       amazon: "https://amzn.to/3y42xy7",
@@ -533,9 +534,9 @@ const publicationGermanOverrides: Record<
   "brains-heart": {
     type: "Gedichtband",
     description:
-      "Ein Debutband uber Bewusstsein, Emotion und die stillen Widerspruche des Menschseins - geschrieben zwischen Studium, Projekten und Produktarbeit.",
+      "Erstlingsband: Menschen, Missverständnisse und Momente, in denen einem auffällt, dass man gar nicht so aufmerksam war wie gedacht. Zwischen Deadlines geschrieben.",
     longDescription:
-      "Veroffentlicht bei Writersgram Publications. Brain's Heart, a Poet ist ein Debutband, entstanden zwischen Studium, Produktarbeit und personlichen Umbruchen. Die Texte bewegen sich zwischen Introspektion und Beobachtung: Nahe und Distanz, Technologie und Menschlichkeit, Anspruch und Verletzlichkeit. Wie im Engineering geht es auch hier um Struktur - aber immer mit Wirkung beim Menschen.",
+      "Bei Writersgram Publications erschienen. Die Texte sind kurz, teils gereimt, teils nicht. Es geht um Zuhören, Peinlichkeiten, Ehrgeiz und Zweifel, oft im selben Atemzug. Wer Code schreibt, merkt vielleicht, dass ich auch dort auf Rhythmus und klare Zeilen achte.",
     tags: ["Lyrik", "Publizierter Autor", "Writersgram Publications"],
   },
 };
@@ -556,7 +557,7 @@ export const workshops = [
     institution: "Hochschule Neu-Ulm",
     year: "2024",
     description:
-      "Ran a series of design thinking sessions with Uzin-Utz AG to find realistic AI opportunities in daily operations. Used the double-diamond approach: broad discovery first, then narrowing to what was feasible and worth building.",
+      "Facilitated design thinking with Uzin-Utz AG to find AI ideas that could survive a real factory floor, not just a slide deck. Double diamond: go wide, then cut hard to what was feasible.",
     methodology: [
       "Double Diamond",
       "User Research",
@@ -565,7 +566,7 @@ export const workshops = [
       "GPT Technology Research",
     ],
     outcome:
-      "5 validated AI use cases with a phased implementation roadmap, presented to senior management.",
+      "Five AI directions the client could picture, plus a phased roadmap management actually signed off on.",
   },
 ];
 
@@ -574,7 +575,7 @@ export const workshops = [
 export const creativeWork = {
   title: "Sketches & Visual Work",
   description:
-    "Drawing has been a quieter part of the work — a way to think before the keyboard. Portraits, landscapes, and abstractions across pencil, acrylic, and ink.",
+    "Drawing is thinking before the keyboard gets involved. Portraits, landscapes, and abstractions in pencil, acrylic, and ink.",
   series: [
     {
       id: "portraits",
@@ -590,7 +591,7 @@ export const creativeWork = {
       title: "Miniature Paintings",
       medium: "Acrylic on canvas",
       concept:
-        "Vibrant scenes compressed into small formats — nature's detail and colour captured in miniature. The constraint of scale forces precision.",
+        "Tiny canvases, loud color. Small size forces you to decide what matters in a scene.",
       pieces: [] as Array<{ id: number; src: string; subject: string }>,
     },
     {
@@ -598,7 +599,7 @@ export const creativeWork = {
       title: "Ink Landscapes",
       medium: "Ink on paper",
       concept:
-        "Mountain landscapes built from non-intersecting black ink lines. Abstract, yet immediately legible — the kind of composition that rewards a second look.",
+        "Mountains from black ink lines that never cross. Looks abstract until you squint; then it clicks.",
       pieces: [] as Array<{ id: number; src: string; subject: string }>,
     },
   ],
@@ -606,9 +607,9 @@ export const creativeWork = {
 
 export const howIBuild = {
   approach:
-    "I start with the problem, not the technology. What does 'working' mean for this project? Who gets blocked if it fails? That shapes the build more than the stack does.",
+    "I start with the problem, not the shiny tool. What does 'working' mean here, and who gets paged if it does not? That answer matters more than whatever is trending on Hacker News.",
   systemThinking:
-    "A feature that works in isolation but breaks the data model in two months is not done. I try to think about what a decision commits us to before shipping it.",
+    "A feature that demos well but wrecks the data model in two months is not finished. I try to notice which choices mortgage the future before I merge them.",
   tradeoffs:
-    "I write down why one approach was chosen over another. Not every decision needs a memo, but the ones that can surprise someone in six months do.",
+    "I jot why we picked A over B. Not every line needs a paper trail, but the ones that will confuse Future Me usually do.",
 };

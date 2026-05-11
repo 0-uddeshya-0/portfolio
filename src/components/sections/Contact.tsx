@@ -24,7 +24,7 @@ export function Contact() {
                 Let's build something together
               </h2>
               <p className="text-charcoal/70 leading-relaxed mb-8 max-w-md">
-                If you're building something in AI, data engineering, or software and think I'd be a good fit, reach out.
+                If you are hiring in AI, data, or general software and want a curious human, not a buzzword dispenser, email me.
               </p>
             </motion.div>
 
