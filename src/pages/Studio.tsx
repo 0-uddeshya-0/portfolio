@@ -229,7 +229,7 @@ export function Studio() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[70] flex items-end sm:items-start sm:pt-24 justify-center p-0 sm:p-4 bg-charcoal/60 backdrop-blur-md"
+            className="fixed inset-0 z-[70] flex items-end sm:items-start sm:pt-28 justify-center p-0 sm:p-4 bg-charcoal/60 backdrop-blur-md"
             onClick={() => setIsBookOpen(false)}
           >
             <motion.div
@@ -238,7 +238,7 @@ export function Studio() {
               exit={{ opacity: 0, scale: 0.98, y: 36 }}
               transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-warm-white rounded-t-3xl sm:rounded-3xl max-w-4xl w-full max-h-[calc(100dvh-4.5rem)] sm:max-h-[calc(100dvh-7rem)] overflow-y-auto modal-scrollbar-hidden shadow-2xl"
+              className="bg-warm-white rounded-t-3xl sm:rounded-3xl max-w-4xl w-full max-h-[calc(100dvh-4.5rem)] sm:max-h-[calc(100dvh-8rem)] overflow-y-auto modal-scrollbar-hidden shadow-2xl"
             >
               <div className="sticky top-0 bg-warm-white/96 backdrop-blur-md border-b border-light-beige p-4 sm:p-6 flex items-start justify-between gap-4 z-10">
                 <div className="min-w-0">

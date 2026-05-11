@@ -14,8 +14,9 @@ export const translations = {
       language: 'Language',
       switchToEnglish: 'English',
       switchToGerman: 'Deutsch',
-      footerTagline: 'Built with intention. Designed with care.',
-      footerLocation: 'Built for people, anywhere.',
+      footerTagline: 'Ulm, Germany — open to remote collaboration.',
+      footerRights: 'All rights reserved.',
+      footerLocation: 'Built with care in Ulm',
     },
     home: {
       badge: 'Open to opportunities',
@@ -64,7 +65,7 @@ export const translations = {
       publication: {
         kicker: 'Beyond code',
         title: 'Published author',
-        body: 'Writing and building have more in common than it looks — both need structure, and both only work when they land with a reader.',
+        body: "Writing and building are more similar than they look. Neither works if the person on the other end doesn't follow.",
         cta: 'About the book',
       },
       cta: {
@@ -77,7 +78,7 @@ export const translations = {
       kicker: 'Contact',
       title: "Let's work together",
       intro:
-        'Open to working student roles, internships, and practical training in AI, data engineering, software development, and adjacent fields.',
+        'Open to working student roles, internships, and practical training in AI, data engineering, and software development.',
       email: 'Email',
       github: 'GitHub',
       locationLabel: 'Location',
@@ -169,7 +170,7 @@ export const translations = {
         },
         tradeoffs: {
           title: 'Clear tradeoffs',
-          body: 'Engineering is choosing between good options. I write decisions down and bias toward solutions that age well.',
+          body: "Engineering is choosing between good options. I write decisions down and prefer solutions that won't look embarrassing in a year.",
         },
       },
       creative: {
@@ -220,8 +221,9 @@ export const translations = {
       language: 'Sprache',
       switchToEnglish: 'English',
       switchToGerman: 'Deutsch',
-      footerTagline: 'Mit Absicht gebaut. Mit Sorgfalt gestaltet.',
-      footerLocation: 'Für Menschen gebaut – überall.',
+      footerTagline: 'Ulm, Deutschland — offen für Remote-Zusammenarbeit.',
+      footerRights: 'Alle Rechte vorbehalten.',
+      footerLocation: 'Mit Sorgfalt aus Ulm',
     },
     home: {
       badge: 'Offen für passende Rollen',
@@ -270,7 +272,7 @@ export const translations = {
       publication: {
         kicker: 'Neben dem Code',
         title: 'Publizierter Autor',
-        body: 'Schreiben und Bauen haben mehr gemeinsam, als man denkt — beides braucht Struktur, und beides zählt erst, wenn es beim Leser ankommt.',
+        body: 'Schreiben und Bauen sind sich ahnlicher, als es zuerst wirkt. Beides scheitert, wenn das Gegenuber nicht folgen kann.',
         cta: 'Zum Buch',
       },
       cta: {
@@ -283,7 +285,7 @@ export const translations = {
       kicker: 'Kontakt',
       title: 'Gemeinsam vorankommen',
       intro:
-        'Offen für Werkstudententätigkeiten, Praktika und Praxisphasen in KI, Data Engineering, Softwareentwicklung und verwandten Bereichen.',
+        'Offen fur Werkstudententatigkeiten, Praktika und Praxisphasen in KI, Data Engineering und Softwareentwicklung.',
       email: 'E-Mail',
       github: 'GitHub',
       locationLabel: 'Standort',
@@ -375,7 +377,7 @@ export const translations = {
         },
         tradeoffs: {
           title: 'Bewusste Kompromisse',
-          body: 'Engineering heißt, zwischen guten Optionen wählen. Entscheidungen festhalten und Lösungen bevorzugen, die auch in einem Jahr noch tragfähig sind.',
+          body: 'Engineering heisst, zwischen guten Optionen zu wahlen. Ich halte Entscheidungen fest und bevorzuge Losungen, fur die man sich in einem Jahr nicht entschuldigen muss.',
         },
       },
       creative: {

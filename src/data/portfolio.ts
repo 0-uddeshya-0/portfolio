@@ -45,7 +45,7 @@ export const valueProposition = [
   {
     title: "AI Systems Development",
     description:
-      "Building end-to-end AI pipelines that transform raw data into actionable intelligence using modern LLMs and machine learning frameworks.",
+      "End-to-end pipelines that take raw data and produce something a person or system can actually act on - LLMs where they earn their place, classical ML where they don't.",
   },
   {
     title: "Data Engineering",
@@ -55,7 +55,7 @@ export const valueProposition = [
   {
     title: "Business Impact",
     description:
-      "Translating technical capabilities into measurable business outcomes through strategic AI implementation and process optimisation.",
+      "Connecting what the model does to what a team cares about - time saved, decisions trusted, risks spotted earlier.",
   },
 ];
 
@@ -110,11 +110,11 @@ export const projects: PortfolioProject[] = [
     title: "KlarBill",
     subtitle: "AI-Powered Utility Bill Assistant",
     description:
-      "An intelligent system that processes and analyses utility bills using local LLMs, providing customers with clear insights and automated assistance. Built as part of the Wilken Challenge at Hochschule Neu-Ulm.",
+      "A local-LLM pipeline that reads utility bills and answers customer questions about them, built for the Wilken Challenge at Hochschule Neu-Ulm.",
     problem:
       "Utility companies struggle with high volumes of customer inquiries about bills, leading to long response times and customer frustration. Manual processing of unstructured bill data is inefficient and error-prone.",
     solution:
-      "Developed an end-to-end AI pipeline that processes PDF bills, extracts structured data using local LLMs (GPTAll), and provides intelligent responses to customer queries. The system includes automated data preprocessing and a FastAPI backend for real-time processing.",
+      "Developed an end-to-end pipeline that processes PDF bills, extracts structured data using local LLMs (GPTAll), and answers customer questions using semantic search over extracted fields. The system includes preprocessing automation and a FastAPI backend.",
     techStack: ["Python", "FastAPI", "GPTAll", "Firebase", "JavaScript", "HTML/CSS"],
     impact: [
       "Reduced customer inquiry response time by 60%",
@@ -126,7 +126,7 @@ export const projects: PortfolioProject[] = [
     context: "Wilken Challenge · Hochschule Neu-Ulm",
     github: "https://github.com/0-uddeshya-0/klarbill",
     about:
-      "KlarBill was built to tackle a real pain point — utility bill confusion. The core challenge was making a local LLM useful on messy, semi-structured PDF data without relying on paid APIs. I designed the pipeline from OCR extraction to semantic Q&A, with FastAPI serving the interface layer.",
+      "The actual challenge was getting a local LLM to do useful work on messy, semi-structured PDF data without relying on paid APIs. I designed the pipeline from OCR extraction to semantic Q&A, with FastAPI as the interface layer.",
   },
   {
     id: "unity-vr-avatar-haptic",
@@ -155,15 +155,15 @@ export const projects: PortfolioProject[] = [
     title: "Process Development",
     subtitle: "Consulting Academic Project",
     description:
-      "Cross-functional consulting engagement applying Lean Six Sigma and risk-based compliance frameworks to identify and document process improvement opportunities.",
+      "Academic consulting project applying Lean Six Sigma to map, analyse, and document process improvement opportunities for a real client.",
     problem:
-      "Teams lacked structured analytical resources and a shared framework for knowledge exchange around process quality and compliance requirements.",
+      "Teams had no shared language for discussing process quality - each group tracked issues differently, and nothing connected.",
     solution:
-      "Facilitated knowledge exchange sessions, prepared stakeholder-facing presentations and documentation, and collaborated with cross-functional teams to implement best practices using DMADVO methodology.",
+      "Ran structured workshops, built analysis documents, and worked across teams to apply DMADVO methodology to the most urgent process gaps.",
     techStack: ["DMADVO", "Lean Six Sigma", "Risk-Based Compliance", "Stakeholder Management"],
     impact: [
-      "Delivered structured analytical resources to cross-functional teams",
-      "Produced stakeholder documentation and implementation reports",
+      "Built and handed over analysis documentation teams could actually use",
+      "Produced reports that supported implementation decisions",
       "Applied Lean Six Sigma to identify process inefficiencies",
     ],
     category: "Consulting",
@@ -197,21 +197,21 @@ export const projects: PortfolioProject[] = [
     title: "AI Use Case Development",
     subtitle: "Design Thinking × AI Strategy",
     description:
-      "Strategic AI implementation project for Uzin-Utz AG — identifying and evaluating AI opportunities through structured design thinking workshops.",
+      "AI consulting project for Uzin-Utz AG - running design thinking workshops to find where AI could realistically help operations.",
     problem:
-      "Organisation needed to identify practical AI applications that could deliver measurable operational improvements without disrupting existing workflows.",
+      "Uzin-Utz needed specific and workable AI opportunities - not a vague strategy deck, but concrete process-level options.",
     solution:
-      "Led design thinking workshops to identify high-impact AI use cases, researched GPT technologies, and developed a comprehensive AI implementation strategy presented to stakeholders.",
+      "Ran design thinking workshops, researched GPT options against actual process pain points, and delivered a phased roadmap to management.",
     techStack: ["Design Thinking", "GPT Research", "Stakeholder Management", "Strategy"],
     impact: [
       "Identified 5 high-value AI use cases",
-      "Developed phased implementation roadmap",
+      "Handed off a phased roadmap with clear next steps",
       "Secured stakeholder buy-in for pilot project",
     ],
     category: "AI Strategy",
     year: "2024",
     about:
-      "Working directly with Uzin-Utz AG gave me practical exposure to how established organisations think about AI adoption — risk aversion, legacy systems, change management. The double-diamond process helped structure ambiguous discovery work into actionable outputs.",
+      "Working with Uzin-Utz showed me how cautious established organizations are about AI adoption, and why. The double-diamond process gave structure to what would otherwise remain a vague brief.",
   },
 ];
 
@@ -354,8 +354,8 @@ export const experience = [
     ],
     actions: [
       "Implemented responsive web applications using HTML5, CSS3, JavaScript and modern frontend frameworks",
-      "Applied User-Centered Design principles for optimal UX across devices",
-      "Established Git workflows and CI/CD pipelines for agile development",
+      "Kept UX consistent across mobile, tablet, and desktop by following user-centered design throughout",
+      "Set up Git workflows and CI/CD pipelines the team could actually maintain",
     ],
     outcomes: [
       "Improved mobile user engagement by 35%",
@@ -455,9 +455,9 @@ export const publications = [
     year: "2021",
     coverImage: getAssetPath("book-cover.png"),
     description:
-      "A debut poetry collection exploring consciousness, emotion, and the tender contradictions of being human. Written in moments between deadlines and design sprints.",
+      "A debut poetry collection about people, confusion, and what it feels like to pay attention. Written between deadlines.",
     longDescription:
-      "Published by Writersgram Publications, Brain's Heart, a Poet is a debut collection written across seasons of study, building, and reflection. The poems move between solitude and connection, technology and tenderness, and the quiet tension between ambition and vulnerability. It is a personal body of work that balances structure with emotion—much like product building, where clarity matters, but human resonance matters more.",
+      "Published by Writersgram Publications. These poems came from years of studying systems while also watching people - what they avoid saying, how they misread each other, and why ambition and doubt often arrive together. The book is short and unforced. Some poems rhyme, some do not. The through-line is attention.",
     links: {
       googlePlay: "https://books.google.com/books/about/Brain_s_heart_a_poet.html?id=eI5NEAAAQBAJ",
       amazon: "https://amzn.to/3y42xy7",
@@ -556,7 +556,7 @@ export const workshops = [
     institution: "Hochschule Neu-Ulm",
     year: "2024",
     description:
-      "Facilitated structured design thinking sprints to identify, validate, and prioritise AI use cases for a manufacturing company's operational workflows. Applied double-diamond methodology with user research, rapid prototyping, and stakeholder presentations.",
+      "Ran a series of design thinking sessions with Uzin-Utz AG to find realistic AI opportunities in daily operations. Used the double-diamond approach: broad discovery first, then narrowing to what was feasible and worth building.",
     methodology: [
       "Double Diamond",
       "User Research",
@@ -581,7 +581,7 @@ export const creativeWork = {
       title: "Portrait Studies",
       medium: "Pencil on paper",
       concept:
-        "Capturing the essence of individuals — expressive faces and the small gestures that make a person recognisable. Each portrait starts with observation and ends with something that feels like understanding.",
+        "Starting with the face and trying to get the expression right. A portrait works when you can tell what the person is thinking without being told.",
       // Add portrait images: { id: 1, src: '/sketches/portrait-01.jpg', subject: 'Study I' }
       pieces: [] as Array<{ id: number; src: string; subject: string }>,
     },
@@ -606,9 +606,9 @@ export const creativeWork = {
 
 export const howIBuild = {
   approach:
-    "I start with the problem, not the technology. Every system I build begins with understanding the business context, user needs, and success metrics. This ensures technical solutions actually solve real problems.",
+    "I start with the problem, not the technology. What does 'working' mean for this project? Who gets blocked if it fails? That shapes the build more than the stack does.",
   systemThinking:
-    "I view projects as interconnected systems rather than isolated features. This means considering data flow, scalability, maintenance, and integration points from day one — not as afterthoughts.",
+    "A feature that works in isolation but breaks the data model in two months is not done. I try to think about what a decision commits us to before shipping it.",
   tradeoffs:
-    "Engineering is about making informed tradeoffs. I document decisions, weigh alternatives, and choose approaches that balance immediate delivery with long-term sustainability.",
+    "I write down why one approach was chosen over another. Not every decision needs a memo, but the ones that can surprise someone in six months do.",
 };
